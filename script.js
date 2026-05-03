@@ -5,24 +5,28 @@
       alt:      'Page 252 of Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, , §§ 1–3',
       caption:  'Fig. 1 \u2014 Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 252, digitised [2026-05-01]',
       download: 'assets/images/lb17919007_5_0288.jpeg',
+      transcription: 'assets/transcriptions/lb17919007_5_0288.txt',
     },
     {
       src:      'assets/images/lb17919007_5_0289.jpeg',
       alt:      'Page 253 of Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, §§ 4–8',
       caption:  'Fig. 2 \u2014 Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 253, digitised [2026-05-01]',
       download: 'assets/images/lb17919007_5_0289.jpeg',
+      transcription: 'assets/transcriptions/lb17919007_5_0289.txt',
     },
     {
       src:      'assets/images/lb17919007_5_0290.jpeg',
       alt:      'Page 254 of Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, §§ 9–14',
       caption:  'Fig. 3 \u2014 Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 254, digitised [2026-05-01]',
       download: 'assets/images/lb17919007_5_0290.jpeg',
+      transcription: 'assets/transcriptions/lb17919007_5_0290.txt',
     },
     {
       src:      'assets/images/lb17919007_5_0291.jpeg',
       alt:      'Page 255 of Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, §§ 15–16',
       caption:  'Fig. 4 \u2014 Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 255, digitised [2026-05-01]',
       download: 'assets/images/lb17919007_5_0291.jpeg',
+      transcription: 'assets/transcriptions/lb17919007_5_0291.txt',
     },
   ];
 
@@ -186,6 +190,7 @@ function changeImage(dir) {
   document.getElementById('img-counter').textContent = (currentImg + 1) + ' / ' + images.length;
   document.getElementById('prev-btn').disabled       = currentImg === 0;
   document.getElementById('next-btn').disabled       = currentImg === images.length - 1;
+  document.getElementById('trans-download').href = data.transcription;
 
   renderZones(currentImg);
   selectZone(0);
@@ -193,24 +198,19 @@ function changeImage(dir) {
 
  /* ── ZONE CLICK ── */
 function selectZone(i) {
+  if (typeof responsiveVoice !== 'undefined') stopSpeech();
   document.querySelectorAll('.zone').forEach(z => z.classList.remove('active'));
   const zone = document.getElementById('zone-' + i);
   if (zone) zone.classList.add('active');
-
   selectedZone = i;
-
   document.getElementById('empty-state').style.display = 'none';
   document.getElementById('trans-card').classList.add('visible');
-
-  const p = allParagraphs[currentImg][i];
-  document.getElementById('trans-num').textContent   = p.num;
-  document.getElementById('trans-title').textContent = p.preview;
-
   showTranslation();
 }
 
 /* ── TABS ── */
 function switchTab(btn) {
+  if (typeof responsiveVoice !== 'undefined') stopSpeech();
   currentTab = btn.dataset.tab;
   document.querySelectorAll('.trans-tab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
@@ -224,8 +224,52 @@ function showTranslation() {
   el.className   = 'trans-body' + (currentTab === 'original' ? ' is-original' : '');
 }
 
+/* ── TEXT TO SPEECH ── */
+function toggleSpeech() {
+  if (typeof responsiveVoice === 'undefined') {
+    alert('Text to speech is not available right now. Please check your internet connection.');
+    return;
+  }
+  if (responsiveVoice.isPlaying()) {
+    stopSpeech();
+  } else {
+    startSpeech();
+  }
+}
+
+function startSpeech() {
+  const text = document.getElementById('trans-body').textContent;
+  if (!text || !text.trim()) return;
+
+  const voice = currentTab === 'english' ? 'UK English Female' : 'Swedish Female';
+
+  responsiveVoice.speak(text, voice, {
+    onstart: function() {
+      document.getElementById('tts-btn').textContent = '\u23F9 Stop';
+      document.getElementById('tts-btn').classList.add('speaking');
+    },
+    onend: function() {
+      document.getElementById('tts-btn').textContent = '\u25B6 Listen';
+      document.getElementById('tts-btn').classList.remove('speaking');
+    },
+    onerror: function() {
+      document.getElementById('tts-btn').textContent = '\u25B6 Listen';
+      document.getElementById('tts-btn').classList.remove('speaking');
+    }
+  });
+}
+
+function stopSpeech() {
+  if (typeof responsiveVoice === 'undefined') return;
+  responsiveVoice.cancel();
+  document.getElementById('tts-btn').textContent = '\u25B6 Listen';
+  document.getElementById('tts-btn').classList.remove('speaking');
+}
+
 /* ── INIT ── */
 document.getElementById('img-counter').textContent = '1 / ' + images.length;
 renderZones(0);
 selectZone(0);
+
+
 

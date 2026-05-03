@@ -6,7 +6,7 @@
   <title>Multimodality Remediation Project</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
+  <script src="https://code.responsivevoice.org/responsivevoice.js?key=Y696Lh6s"></script>
 </head>
 <body>
     <nav>
@@ -145,19 +145,22 @@
         Click on a paragraph in the image to see its original text, modern Swedish, and English translation here.
       </div>
 
-      <div class="trans-card visible" id="trans-card">
-        <div class="trans-card-header">
-          <span class="trans-card-num" id="trans-num">&sect; </span>
-          <span class="trans-card-title" id="trans-title"></span>
-        </div>
-        <div class="trans-tabs">
-          <button class="trans-tab active" data-tab="original" onclick="switchTab(this)">Original</button>
-          <button class="trans-tab" data-tab="modern" onclick="switchTab(this)">Modern Swedish</button>
-          <button class="trans-tab" data-tab="english" onclick="switchTab(this)">English</button>
-        </div>
-        <div class="trans-body is-original" id="trans-body"></div>
+          <div class="trans-card visible" id="trans-card">
+      <div class="trans-tabs">
+        <button class="trans-tab active" data-tab="original" onclick="switchTab(this)">Original</button>
+        <button class="trans-tab" data-tab="modern" onclick="switchTab(this)">Modern Swedish</button>
+        <button class="trans-tab" data-tab="english" onclick="switchTab(this)">English</button>
       </div>
+      <div class="trans-body is-original" id="trans-body"></div>
+  <div class="tts-bar">
+    <button class="tts-btn" id="tts-btn" onclick="toggleSpeech()">&#9654; Listen</button>
+  </div>
     </div>
+
+    <a class="trans-download" id="trans-download" href="assets/transcriptions/lb17919007_5_0288.txt" download>
+      Download full transcription ↓
+    </a>
+  </div>
   </div>
   </div>
     </main>

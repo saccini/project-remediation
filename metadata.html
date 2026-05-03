@@ -27,9 +27,46 @@
     </header>
     <main>
         <div>
-            <span class="topic"></span>
+            <span class="topic">Embedded metadata (IPTC / XMP)</span>
+            <p style="font-size:0.82rem; color:var(--ink-light); margin-bottom:1rem; font-style:italic;">
+            Added via GIMP &rarr; Image &rarr; Metadata &rarr; Edit Metadata
+            </p>
+            <table class="meta-table">
+                <tr><td>Title</td><td>[Full title of the digitised image file]</td></tr>
+                <tr><td>Author</td><td>[Your full names]</td></tr>
+                <tr><td>Description</td><td>[One sentence describing what is on the page]</td></tr>
+                <tr><td>Copyright status</td><td>Copyrighted</td></tr>
+                <tr><td>Copyright line</td><td>&copy; 2025 [Your Names], licensed under CC-BY 4.0</td></tr>
+                <tr>
+                <td>Copyright URL</td>
+                <td><a href="https://creativecommons.org/licenses/by/4.0/" style="color:var(--gold);">creativecommons.org/licenses/by/4.0</a></td>
+                </tr>
+            </table>
         </div>
         <hr class="rule">
+        <div>
+      <span class="label">External metadata (Dublin Core)</span>
+      <p style="font-size:0.82rem; color:var(--ink-light); margin-bottom:1rem; font-style:italic;">
+        Stored in <code style="font-family:var(--font-mono); font-size:0.8rem;">assets/metadata/metadata.xml</code>
+      </p>
+      <table class="meta-table">
+        <tr><td>dc:title</td><td>[Title]</td></tr>
+        <tr><td>dc:creator</td><td>[Names]</td></tr>
+        <tr><td>dc:subject</td><td>[e.g. Swedish legal history; digitisation]</td></tr>
+        <tr><td>dc:description</td><td>[One sentence description]</td></tr>
+        <tr><td>dc:publisher</td><td>[Your names or institution]</td></tr>
+        <tr><td>dc:date</td><td>[YYYY-MM-DD]</td></tr>
+        <tr><td>dc:type</td><td>Image</td></tr>
+        <tr><td>dc:format</td><td>image/jpeg</td></tr>
+        <tr><td>dc:source</td><td>[Full bibliographic reference to original book]</td></tr>
+        <tr><td>dc:language</td><td>sv</td></tr>
+        <tr><td>dc:rights</td><td>CC-BY 4.0</td></tr>
+      </table>
+      <a class="img-download" href="assets/metadata/metadata.xml" style="margin-top:1rem;">
+        Download Dublin Core XML &darr;
+      </a>
+    </div>
+
     </main>
     <footer>
         <p>Multimodality: Narrative and Context in Different Media Formats · University of Borås · 2026</p>
