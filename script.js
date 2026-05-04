@@ -203,8 +203,6 @@ function selectZone(i) {
   const zone = document.getElementById('zone-' + i);
   if (zone) zone.classList.add('active');
   selectedZone = i;
-  document.getElementById('empty-state').style.display = 'none';
-  document.getElementById('trans-card').classList.add('visible');
   showTranslation();
 }
 
@@ -218,10 +216,33 @@ function switchTab(btn) {
 }
 
 function showTranslation() {
-  const p  = allParagraphs[currentImg][selectedZone];
   const el = document.getElementById('trans-body');
-  el.textContent = p[currentTab];
-  el.className   = 'trans-body' + (currentTab === 'original' ? ' is-original' : '');
+  const pageParagraphs = allParagraphs[currentImg];
+
+  el.innerHTML = '';
+
+  pageParagraphs.forEach((p, i) => {
+    const block = document.createElement('div');
+    block.className = 'para-block' + (i === selectedZone ? ' para-block-active' : '');
+    block.id = 'para-block-' + i;
+    block.onclick = () => selectZone(i);
+
+    const text = document.createElement('p');
+    const content = p[currentTab] || '';
+    text.textContent = content;
+
+    if (currentTab === 'original') {
+      text.classList.add('is-original');
+    }
+
+    block.appendChild(text);
+    el.appendChild(block);
+  });
+
+  const active = document.getElementById('para-block-' + selectedZone);
+  if (active) active.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+
+  el.className = 'trans-body';
 }
 
 /* ── TEXT TO SPEECH ── */
@@ -238,7 +259,8 @@ function toggleSpeech() {
 }
 
 function startSpeech() {
-  const text = document.getElementById('trans-body').textContent;
+  const p = allParagraphs[currentImg][selectedZone];
+  const text = p[currentTab];
   if (!text || !text.trim()) return;
 
   const voice = currentTab === 'english' ? 'UK English Female' : 'Swedish Female';
@@ -265,6 +287,26 @@ function stopSpeech() {
   document.getElementById('tts-btn').textContent = '\u25B6 Listen';
   document.getElementById('tts-btn').classList.remove('speaking');
 }
+
+/* ── LIGHTBOX ── */
+function openLightbox() {
+  const src = document.getElementById('main-img').src;
+  const alt = document.getElementById('main-img').alt;
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox-img').alt = alt;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* close lightbox with Escape key */
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
 
 /* ── INIT ── */
 document.getElementById('img-counter').textContent = '1 / ' + images.length;

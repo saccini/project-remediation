@@ -368,7 +368,6 @@ main {
   font-size: 0.92rem;
   line-height: 1.8;
   color: rgb(60, 60, 60);
-  min-height: 120px;
 }
 
 .trans-body.is-original { font-style: italic; }
@@ -402,6 +401,82 @@ main {
   border: 1px solid rgb(180, 180, 180);
   border-radius: 2px;
   display: block;
+}
+
+.img-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.6rem 1rem;
+  background: rgb(20, 20, 20);
+  border-bottom: 1px solid rgb(40, 40, 40);
+}
+
+.img-toolbar .img-counter {
+  color: rgb(180, 180, 180);
+}
+
+.img-toolbar .img-hint {
+  margin-left: auto;
+  margin-top: 0;
+  color: rgb(120, 120, 120);
+  border: none;
+}
+
+.img-toolbar .img-hint::before {
+  border-color: rgb(120, 120, 120);
+}
+
+.img-toolbar .nav-btn {
+  border-color: rgb(80, 80, 80);
+  color: rgb(200, 200, 200);
+}
+
+.img-toolbar .nav-btn:hover:not(:disabled) {
+  background: rgb(40, 40, 40);
+  color: rgb(255, 255, 255);
+}
+
+/* override main max-width just for artefact page */
+.artefact-main {
+  max-width: 80%;
+  padding: 2rem 0 5rem 0;
+}
+
+.image-page-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;  /* image takes more space */
+  gap: 0;
+  align-items: start;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .image-page-grid { grid-template-columns: 1fr; }
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  border: none;           /* remove border for full bleed feel */
+  border-right: 1px solid rgb(220, 220, 220);
+  border-radius: 0;       /* remove rounded corners */
+  overflow: hidden;
+  background: rgb(30, 30, 30);  /* dark bg like a viewer */
+  cursor: crosshair;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.trans-right {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  position: sticky;
+  top: 56px;             /* stick below the nav */
 }
 
 .meta-table {
@@ -466,6 +541,95 @@ main {
 .tts-btn.speaking {
   background: rgb(20, 20, 20);
   color: rgb(255, 255, 255);
+}
+
+/* ── LIGHTBOX ── */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox-inner {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  display: block;
+  border: 1px solid rgb(60, 60, 60);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 32px;
+  height: 32px;
+  background: rgb(20, 20, 20);
+  border: 1px solid rgb(80, 80, 80);
+  border-radius: 50%;
+  color: rgb(220, 220, 220);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.lightbox-close:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(20, 20, 20);
+}
+
+/* zoom button in nav row */
+.zoom-btn {
+  margin-left: auto;
+}
+
+/* ── PARAGRAPH BLOCKS (full transcription view) ── */
+.para-block {
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid rgb(235, 235, 235);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.para-block:last-child {
+  border-bottom: none;
+}
+
+.para-block:hover {
+  background: rgb(248, 248, 248);
+}
+
+.para-block-active {
+  background: rgb(235, 235, 235);
+  border-left: 3px solid rgb(20, 20, 20);
+}
+
+.para-block p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: rgb(60, 60, 60);
+}
+
+.para-block p.is-original {
+  font-style: italic;
 }
 
 footer {

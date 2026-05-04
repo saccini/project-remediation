@@ -23,144 +23,54 @@
     <header class="page-header">
         <div class="page-header-inner">
             <h1>The image &<br><em>transcription</em></h1>
-            <p>Here you can see the remediated images and read transcription in its original text, modern swedish and english translations.</p>
+            <p>Here you can see the remediated images and read corresponding text in its original, modern swedish and english translations.</p>
         </div>
     </header>
-    <main>
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <div class="lightbox-inner" onclick="event.stopPropagation()">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="">
+      </div>
+    </div>
+    <main class="artefact-main">
         <div class="image-page-grid">
-
     <div>
       <span class="topic">Digitised pages</span>
-
       <div class="img-nav">
         <button class="nav-btn" id="prev-btn" onclick="changeImage(-1)" disabled>&larr; Prev</button>
         <button class="nav-btn" id="next-btn" onclick="changeImage(1)">Next &rarr;</button>
         <span class="img-counter" id="img-counter">1 / 4</span>
+        <button class="nav-btn zoom-btn" onclick="openLightbox()" title="Zoom in">&#128269; Zoom</button>
       </div>
-
       <div class="img-container" id="img-container">
-
         <img
           id="main-img"
           src="assets/images/lb17919007_5_0288.jpeg"
           alt="Page 252 of the Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734"
         >
-
-        <div class="zone-overlay" id="zone-overlay">
-            <!-- img 1 -->
-            <div class="zone" style="top:50%; left:13%; width:80%; height:4%;"
-            onclick="selectZone(1)" id="zone-1">
-            <span class="zone-label">§ 1</span>
-            </div>
-
-            <div class="zone" style="top:54%; left:13%; width:80%; height:4%;"
-            onclick="selectZone(2)" id="zone-2">
-            <span class="zone-label">§ 2</span>
-            </div>
-
-            <div class="zone" style="top:58%; left:13%; width:80%; height:18%;"
-            onclick="selectZone(3)" id="zone-3">
-            <span class="zone-label">§ 3</span>
-            </div>
-
-            <!-- img 2 -->
-             <div class="zone" style="top:8%; left:10%; width:52%; height:4%;"
-            onclick="selectZone(4)" id="zone-4">
-            <span class="zone-label">§ 4 </span>
-            </div>
-
-            <div class="zone" style="top:12%; left:10%; width:52%; height:16%;"
-            onclick="selectZone(5)" id="zone-5">
-            <span class="zone-label">§ 5 </span>
-            </div>
-
-            <div class="zone" style="top:28%; left:10%; width:52%; height:23%;"
-            onclick="selectZone(6)" id="zone-6">
-            <span class="zone-label">§ 6</span>
-            </div>
-
-            <div class="zone" style="top:51%; left:10%; width:52%; height:10%;"
-            onclick="selectZone(7)" id="zone-7">
-            <span class="zone-label">§ 7</span>
-            </div>
-
-            <div class="zone" style="top:61%; left:10%; width:52%; height:11%;"
-            onclick="selectZone(8)" id="zone-8">
-            <span class="zone-label">§ 8</span>
-            </div>
-
-            <!-- img 3 -->
-             <div class="zone" style="top:7%; left:38%; width:58%; height:5%;"
-            onclick="selectZone(9)" id="zone-9">
-            <span class="zone-label">§ 9</span>
-            </div>
-
-            <div class="zone" style="top:12%; left:38%; width:58%; height:5%;"
-            onclick="selectZone(10)" id="zone-10">
-            <span class="zone-label">§ 10</span>
-            </div>
-
-            <div class="zone" style="top:18%; left:38%; width:58%; height:20%;"
-            onclick="selectZone(11)" id="zone-11">
-            <span class="zone-label">§ 11</span>
-            </div>
-
-            <div class="zone" style="top:38%; left:38%; width:58%; height:16%;"
-            onclick="selectZone(12)" id="zone-12">
-            <span class="zone-label">§ 12</span>
-            </div>
-
-            <div class="zone" style="top:54%; left:38%; width:58%; height:9.5%;"
-            onclick="selectZone(13)" id="zone-13">
-            <span class="zone-label">§ 13</span>
-            </div>
-
-            <div class="zone" style="top:63.5%; left:38%; width:58%; height:9%;"
-            onclick="selectZone(14)" id="zone-14">
-            <span class="zone-label">§ 14</span>
-            </div>
-
-            <!-- img 4 -->
-             <div class="zone" style="top:7%; left:10%; width:60%; height:5%;"
-            onclick="selectZone(15)" id="zone-15">
-            <span class="zone-label">§ 15</span>
-            </div>
-
-            <div class="zone" style="top:12%; left:10%; width:60%; height:9%;"
-            onclick="selectZone(16)" id="zone-16">
-            <span class="zone-label">§ 16</span>
-            </div>
-
-        </div>
+        <div class="zone-overlay" id="zone-overlay"></div>
       </div>
-
       <p class="img-hint">Click a paragraph in the image to see translations</p>
       <p class="img-caption" id="img-caption">Fig. 1 &mdash; Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 252, digitised [2026-05-01]</p>
-      <a class="img-download" href="assets/image/page1.jpg" download id="img-download">Download image &darr;</a>
+      <a class="img-download" href="assets/images/lb17919007_5_0288.jpeg" download id="img-download">Download image &darr;</a>
     </div>
     <div class="trans-right">
-      <span class="label">Transcription</span>
-
-      <div class="empty-state" id="empty-state">
-        Click on a paragraph in the image to see its original text, modern Swedish, and English translation here.
+      <span class="label">Text</span>
+      <div class="trans-card visible" id="trans-card">
+        <div class="trans-tabs">
+          <button class="trans-tab active" data-tab="original" onclick="switchTab(this)">Original</button>
+          <button class="trans-tab" data-tab="modern" onclick="switchTab(this)">Modern Swedish</button>
+          <button class="trans-tab" data-tab="english" onclick="switchTab(this)">English</button>
+        </div>
+        <div class="trans-body" id="trans-body"></div>
+        <div class="tts-bar">
+          <button class="tts-btn" id="tts-btn" onclick="toggleSpeech()">&#9654; Listen</button>
+        </div>
       </div>
-
-          <div class="trans-card visible" id="trans-card">
-      <div class="trans-tabs">
-        <button class="trans-tab active" data-tab="original" onclick="switchTab(this)">Original</button>
-        <button class="trans-tab" data-tab="modern" onclick="switchTab(this)">Modern Swedish</button>
-        <button class="trans-tab" data-tab="english" onclick="switchTab(this)">English</button>
-      </div>
-      <div class="trans-body is-original" id="trans-body"></div>
-  <div class="tts-bar">
-    <button class="tts-btn" id="tts-btn" onclick="toggleSpeech()">&#9654; Listen</button>
-  </div>
+      <a class="trans-download" id="trans-download" href="assets/transcriptions/lb17919007_5_0288.txt" download>
+        Download full transcription &darr;
+      </a>
     </div>
-
-    <a class="trans-download" id="trans-download" href="assets/transcriptions/lb17919007_5_0288.txt" download>
-      Download full transcription ↓
-    </a>
-  </div>
   </div>
   </div>
     </main>
