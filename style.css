@@ -648,4 +648,97 @@ footer p {
   text-transform: uppercase;
   color: rgb(245, 245, 245);
 }
+/* Creates the flexible side-by-side layout */
+.workspace-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px; 
+    margin-top: 20px;
+}
 
+/* The dynamic, flexible image container */
+.workspace-image {
+    /* flex: grow shrink basis. 
+       This tells it to take up 45% of the row, no matter what. */
+    flex: 0 0 50%; 
+    max-width: 50%; /* Failsafe to prevent overflowing */
+}
+
+/* The image adapts perfectly to its container */
+.workspace-image img {
+    width: 100%; 
+    height: auto;       /* Preserves the natural aspect ratio */
+    border-radius: 4px; 
+    display: block; 
+}
+
+/* The dynamic text container */
+.workspace-text {
+    flex: 1;            /* Tells the text to take up whatever space is left over */
+    min-width: 0; 
+}
+
+/* --- PRO TIP: MOBILE RESPONSIVENESS --- */
+/* When the screen gets smaller than an iPad (768px), stack them on top of each other instead of side-by-side */
+@media (max-width: 768px) {
+    .workspace-layout {
+        flex-direction: column; /* Stacks the items vertically */
+    }
+    
+    .workspace-image {
+        flex: 1 1 100%;
+        max-width: 100%; /* Image takes up the full width on phones */
+    }
+}
+/* --- UPDATED: Modal/Popover Container --- */
+.modal-content {
+    background-color: #000000; /* Pure black background */
+    padding: 5px 15px 15px 15px;
+    border: 1px solid #39ff14; /* Neon green border */
+    width: 600px; /* Increased from 450px to make it significantly wider */
+    border-radius: 8px;
+    /* Added a subtle neon green glow to the drop shadow */
+    box-shadow: 0 10px 25px rgba(57, 255, 20, 0.15); 
+    margin: 0; 
+}
+
+.modal-content h3 {
+    color: #39ff14; /* Neon green text for the header */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #333; /* Optional: adds a subtle line under the header */
+    padding-bottom: 10px;
+}
+
+/* --- UPDATED: The Code Block Window --- */
+#metadata-modal pre {
+    background-color: #000000; /* Pure black to blend with the container */
+    color: #39ff14; /* Neon green text */
+    padding: 10px;
+    overflow-x: auto; /* Forces horizontal scrollbar if lines are too long */
+    overflow-y: auto; /* Forces vertical scrollbar if the file is too tall */
+    max-height: 500px; /* This is the magic property that enables vertical scrolling */
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    border: none; /* Removed the inner border to keep the terminal look clean */
+}
+
+/* Make the close button neon green on hover too */
+.close-button:hover,
+.close-button:focus {
+    color: #39ff14;
+    text-decoration: none;
+}/* Creates the side-by-side layout */
+.workspace-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px; 
+    margin-top: 20px;
+}
+
+/* Controls the pop-up window's position */
+.modal {
+    display: none; 
+    position: absolute; 
+    z-index: 1000; 
+}

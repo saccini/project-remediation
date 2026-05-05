@@ -6,59 +6,146 @@
   <title>Multimodality Remediation Project</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="metadata.js" defer></script>
 </head>
 <body>
     <nav>
         <a href="index.html" class="nav-logo">Remediation <span>Project</span></a>
         <ul class="nav-links">
             <li><a href="index.html">Background</a></li>
-            <li><a href="process.html", class="active">Process</a></li>
+            <li><a href="process.html" class="active">Process</a></li>
             <li><a href="artefact.html">Artefact</a></li>
             <li><a href="metadata.html">Metadata</a></li>
             <li><a href="teixml.html">TEI-XML</a></li>
-            <li><a href="references.html">references</a></li>
+            <li><a href="references.html">References</a></li>
         </ul>
     </nav>
+    
     <header class="page-header">
         <div class="page-header-inner">
-            <h1>The digitisation<br><em>process</em></h1>
-            <p>[short description]</p>
+            <h1>The digitization<br><em>process</em></h1>
+            <p>This page describes the process of digitizing the document.
+                We went through several iterations of this process that we have documented
+                below, but if you are only interested in the final setup you can skip it by 
+                <!-- This anchor link points to the ID of the final section -->
+                <a href="#final-setup">clicking here</a>.
+            </p>
         </div>
     </header>
+    
     <main>
-        <div>
-            <span class="topic">Step 1</span>
+        <!-- Materials List Section -->
+        <section>
+            <span class="topic">Overview</span>
             <div class="bodytext">
-                <h2>Equipment</h2>
+                <h2>Materials & Equipment</h2>
+                <p>Before beginning the iterations, we gathered the following equipment for the archival process:</p>
+                <p><br><em>note that some materials were added between iterations in which case the items after that iteration is mentioned was also added during that iteration. </em></p>
+                <ul>
+                    <li>[Cameras]</li>
+                    <li>Iphone pro 11</li>
+                    <li>Samsung Galaxy S24 Ultra</li>
+                    <li>[Lighting equipment]</li>
+                    <li>Two 1,9W LED lights from the IKEA Nävlige series</li>
+                    <li>[Golves]</li>
+                    <li>White cotton gloves were always used when handling the document</li>
+                    <li>[Background <em>2nd iteration onwards</em>]</li>
+                    <li>Exibel mouse mat (Neutral gray)</li>
+                    <li>[Tape]</li>
+                    <li>Electircal tape & Extra strong Duct-tape</li>
+                    <li>[Tape measure]</li>
+                    <li>Hard head purple 3m roll measurer</li>
+                    <li>[Paper <em>3rd iteration onwards</em>]</li>
+                    <li>1 A2 paper from panduro cut in half to reflect even light</li>
+                    <li>[Light stand]</li>
+                    <li>1 kitchen chair clipping the lamps onto the back</li>
+                    <li>[Miscellaneous]</li>
+                    <li>Stainless steel scisors</li>
+                    <li>Water leveler</li>
+                    <li>[Software used for processing]</li>
+                    <li>Gimp 2.10 (Windows)</li>
+                </ul>
+            </div>
+        <!-- ... Inside your Overview section ... -->
+    <div class="workspace-layout">
+        <!-- Left Column: The Image -->
+        <div class="workspace-image">
+            <img src="assets/images/Work_areawmetadata.jpeg" 
+                 alt="Our night-time digitisation workspace" 
+                 class="metadata-image"
+                 data-xml-src="assets/images/metadataWork_area.xml">
+            <p class="caption"><em>Click image for XML metadata.</em></p>
+        </div>
+
+        <!-- Right Column: The Description -->
+        <div class="workspace-text">
+            <h3>Workspace Environment</h3>
+            <p>All pictures were taken at night to limit light pollution from other sources. This meant that once we realized that we would be
+                unable to continue with the photography session due to some materials missing we had to wait
+                for the sun to set again. This meant that these images were taken between the 29/04-04/05-2026.
+            </p>
+        </div>
+    </div>
+    
+</section>
+
+<hr class="rule">
+
+<!-- Iteration 1 -->
+<section>
+    <span class="topic">Iteration 1</span>
+    <!-- ... rest of your HTML ... -->
+        
+        <!-- Iteration 1 -->
+        <section>
+            <span class="topic">Iteration 1</span>
+            <div class="bodytext">
+                <h2>Initial Setup & Testing</h2>
                 <p>
-                    [We will describe the camera and other items]
+                    [Describe the first attempt. E.g., How was the lighting positioned? What went wrong? Was there glare, shadow, or distortion?]
                 </p>
             </div>
-        </div>
+        </section>
+        
         <hr class="rule">
-        <div>
-            <span class="topic">Step 2</span>
+        
+        <!-- Iteration 2 -->
+        <section>
+            <span class="topic">Iteration 2</span>
             <div class="bodytext">
-                <h2>Setup</h2>
+                <h2>Adjusting the Environment</h2>
                 <p>
-                    [We will describe the lighting, distance from camera to objects, etc]
+                    [Describe the second attempt based on what you learned from the first. E.g., Moving the lights, changing camera settings, or adjusting the artefact's position.]
                 </p>
             </div>
-        </div>
+        </section>
+        
         <hr class="rule">
-        <div>
-            <span class="topic">Step 3</span>
+        
+        <!-- Iteration 3 (Target for the skip link) -->
+        <section id="final-setup">
+            <span class="topic">Iteration 3</span>
             <div class="bodytext">
-                <h2>Pre/ post processing</h2>
+                <h2>The Final Setup & Post-processing</h2>
                 <p>
-                    [We will describe the adjustments we did to the image]
+                    [Describe the successful, final setup. Include the final lighting angles, distance from camera to objects, and the pre/post-processing adjustments you made to the images.]
                 </p>
             </div>
-        </div>
+        </section>
     </main>
+    
     <footer>
-  <p>Multimodality: Narrative and Context in Different Media Formats · University of Borås · 2026</p>
-  <p>Sachini Nissanka . Erik Lundahl</p>
-</footer>
+        <p>Multimodality: Narrative and Context in Different Media Formats · University of Borås · 2026</p>
+        <p>Sachini Nissanka · Erik Lundahl</p>
+    </footer>
+
+    <div    id="metadata-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>GIMP XML Metadata</h3>
+            <!-- <pre> and <code> tags are standard for displaying formatted code -->
+            <pre><code id="metadata-code-block">Loading...</code></pre>
+        </div>
+    </div>
 </body>
 </html>
