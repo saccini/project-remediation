@@ -628,6 +628,173 @@ main {
   font-style: italic;
 }
 
+.xml-viewer-wrap { margin: 2rem 0; }
+
+    .xml-file-tabs {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .xml-file-tab {
+      font-family: "Space Mono", monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border: 1px solid rgb(180, 180, 180);
+      border-radius: 2px;
+      background: transparent;
+      color: rgb(120, 120, 120);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+
+    .xml-file-tab:hover {
+      background: rgb(235, 235, 235);
+      color: rgb(20, 20, 20);
+    }
+
+    .xml-file-tab.active {
+      background: rgb(20, 20, 20);
+      color: rgb(255, 255, 255);
+      border-color: rgb(20, 20, 20);
+    }
+
+    .xml-box {
+      background: rgb(20, 20, 20);
+      border-radius: 2px;
+      overflow: hidden;
+      border: 1px solid rgb(40, 40, 40);
+    }
+
+    .xml-box-toolbar {
+      background: rgb(30, 30, 30);
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgb(40, 40, 40);
+    }
+
+    .xml-box-filename {
+      font-family: "Space Mono", monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      color: rgb(160, 160, 160);
+    }
+
+    .xml-box-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .xml-copy-btn {
+      font-family: "Space Mono", monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border: 1px solid rgb(80, 80, 80);
+      border-radius: 2px;
+      background: transparent;
+      color: rgb(160, 160, 160);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .xml-copy-btn:hover {
+      background: rgb(50, 50, 50);
+      color: rgb(220, 220, 220);
+    }
+
+    .xml-download-btn {
+      font-family: "Space Mono", monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border: 1px solid rgb(80, 80, 80);
+      border-radius: 2px;
+      background: transparent;
+      color: rgb(160, 160, 160);
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .xml-download-btn:hover {
+      background: rgb(50, 50, 50);
+      color: rgb(220, 220, 220);
+    }
+
+    .xml-content {
+      padding: 1.25rem 1.5rem;
+      font-family: "Space Mono", monospace;
+      font-size: 0.75rem;
+      line-height: 1.9;
+      overflow-x: auto;
+      white-space: pre-wrap;      
+      word-break: break-word; 
+      color: rgb(200, 200, 200);
+      max-height: 520px;
+      overflow-y: auto;
+    }
+
+    .xt { color: rgb(120, 180, 255); }
+    .xa { color: rgb(255, 180, 100); }
+    .xv { color: rgb(150, 210, 150); }
+    .xc { color: rgb(100, 110, 120); }
+
+    .xml-loading {
+      padding: 2rem;
+      text-align: center;
+      font-family: "Space Mono", monospace;
+      font-size: 0.72rem;
+      color: rgb(100, 100, 100);
+      letter-spacing: 0.06em;
+    }
+
+    .xml-error {
+      padding: 2rem;
+      text-align: center;
+      font-family: "Space Mono", monospace;
+      font-size: 0.72rem;
+      color: rgb(200, 100, 100);
+      letter-spacing: 0.06em;
+      line-height: 1.8;
+    }
+
+    .copy-confirm {
+      font-family: "Space Mono", monospace;
+      font-size: 0.62rem;
+      color: rgb(100, 200, 100);
+      letter-spacing: 0.07em;
+    }
+
+    /* ── TAGS TWO COLUMN ── */
+    .tags-two-col {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 3rem;
+      margin: 1.5rem 0;
+      align-items: start;
+    }
+
+    @media (max-width: 700px) {
+      .tags-two-col { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    code {
+      font-family: "Space Mono", monospace;
+      font-size: 0.82em;
+      color: rgb(20, 20, 20);
+      background: rgb(235, 235, 235);
+      padding: 1px 5px;
+      border-radius: 2px;
+    }
+
 footer {
   background: rgb(20, 20, 20);
   padding: 2rem 2.5rem;

@@ -22,18 +22,160 @@
     <header class="page-header">
         <div class="page-header-inner">
             <h1>TEI-XML<br><em>encoding</em></h1>
-            <p>By using TEI-XML we ensure our transcription is well-formed and it can be read by any XML-aware application.</p>
+            <p>By using TEI-XML we ensure our transcriptions are well-formed and it can be read by any XML-aware application.</p>
         </div>
     </header>
     <main>
         <div>
-            <span class="topic">Encoded text of the artefact </span>
+      <span class="topic">Encoded text of the artefact</span>
+      <div class="bodytext">
+        <p>Each of the four digitised pages has been encoded as a separate TEI-XML file. Select a page below to view its encoding. Each file can also be downloaded individually.</p>
+      </div>
+    </div>
+
+    <div class="xml-viewer-wrap">
+      <div class="xml-file-tabs">
+        <button class="xml-file-tab active" onclick="loadXML(0, this)">Page 252</button>
+        <button class="xml-file-tab" onclick="loadXML(1, this)">Page 253</button>
+        <button class="xml-file-tab" onclick="loadXML(2, this)">Page 254</button>
+        <button class="xml-file-tab" onclick="loadXML(3, this)">Page 255</button>
+      </div>
+
+      <div class="xml-box">
+        <div class="xml-box-toolbar">
+          <span class="xml-box-filename" id="xml-filename">img1.xml</span>
+          <div class="xml-box-actions">
+            <span class="copy-confirm" id="copy-confirm" style="display:none;">Copied!</span>
+            <button class="xml-copy-btn" onclick="copyXML()">Copy</button>
+            <a class="xml-download-btn" id="xml-download-link"
+               href="assets/transcriptions/img1.xml"
+               download="img1.xml">Download &darr;</a>
+          </div>
         </div>
-        <hr class="rule">
+        <div class="xml-content" id="xml-content">
+          <div class="xml-loading">Loading...</div>
+        </div>
+      </div>
+    </div>
+    <hr class="rule">
+    <div>
+      <span class="topic">Tags used &amp; reasoning</span>
+    </div>
+
+    <div class="tags-two-col">
+
+      <div class="bodytext">
+        <h2>How we handled the text</h2>
+        <p></p>
+
+        <p></p>
+
+        <p></p>
+
+        <p></p>
+
+        <h2>What is gained and lost</h2>
+        <p></p>
+
+        <p></p>
+      </div>
+
+      <div>
+        <span class="topic">TEI elements used</span>
+        <table class="meta-table" style="margin-top: 0.75rem;">
+          <tr><td>&lt;teiHeader&gt;</td><td></td></tr>
+          <tr><td>&lt;titleStmt&gt;</td><td></td></tr>
+          <tr><td>&lt;respStmt&gt;</td><td></td></tr>
+          <tr><td>&lt;publicationStmt&gt;</td><td></td></tr>
+          <tr><td>&lt;sourceDesc&gt;</td><td></td></tr>
+          <tr><td>&lt;msDesc&gt;</td><td></td></tr>
+          <tr><td>&lt;bibl&gt;</td><td></td></tr>
+          <tr><td>&lt;physDesc&gt;</td><td></td></tr>
+          <tr><td>&lt;profileDesc&gt;</td><td></td></tr>
+          <tr><td>&lt;encodingDesc&gt;</td><td></td></tr>
+          <tr><td>&lt;gap&gt;</td><td></td></tr>
+          <tr><td>&lt;hi&gt;</td><td></td></tr>
+          <tr><td>&lt;lb/&gt;</td><td></td></tr>
+          <tr><td>&lt;fw&gt;</td><td></td></tr>
+          <tr><td>&lt;milestone&gt;</td><td></td></tr>
+        </table>
+      </div>
+
+    </div>
     </main>
     <footer>
         <p>Multimodality: Narrative and Context in Different Media Formats · University of Borås · 2026</p>
         <p>Sachini Nissanka . Erik Lundahl</p>
     </footer>
+    <script>
+    const xmlFiles = [
+      { label: 'Page 252', filename: 'img1.xml', path: 'assets/transcriptions/img1.xml' },
+      { label: 'Page 253', filename: 'img2.xml', path: 'assets/transcriptions/img2.xml' },
+      { label: 'Page 254', filename: 'img3.xml', path: 'assets/transcriptions/img3.xml' },
+      { label: 'Page 255', filename: 'img4.xml', path: 'assets/transcriptions/img4.xml' },
+    ];
+
+    let currentXMLText = '';
+
+    function loadXML(index, btn) {
+      document.querySelectorAll('.xml-file-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+
+      const file = xmlFiles[index];
+      const contentEl  = document.getElementById('xml-content');
+      const filenameEl = document.getElementById('xml-filename');
+      const downloadEl = document.getElementById('xml-download-link');
+
+      filenameEl.textContent  = file.filename;
+      downloadEl.href         = file.path;
+      downloadEl.download     = file.filename;
+      contentEl.innerHTML     = '<div class="xml-loading">Loading...</div>';
+
+      fetch(file.path)
+        .then(res => {
+          if (!res.ok) throw new Error('not found');
+          return res.text();
+        })
+        .then(text => {
+          currentXMLText = text;
+          contentEl.innerHTML = syntaxHighlight(escapeHTML(text));
+        })
+        .catch(() => {
+          currentXMLText = '';
+          contentEl.innerHTML = '<div class="xml-error">Could not load ' + file.filename + '.<br>Make sure the file exists in assets/transcriptions/</div>';
+        });
+    }
+
+    function escapeHTML(str) {
+      return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function syntaxHighlight(str) {
+      return str
+        .replace(/(&lt;!--[\s\S]*?--&gt;)/g, '<span class="xc">$1</span>')
+        .replace(/(&lt;\/?[\w:]+)([\s\S]*?)(\/?&gt;)/g, function(m, open, attrs, close) {
+          const highlightedAttrs = attrs.replace(/([\w:]+)(=)(&quot;[^&]*&quot;)/g,
+            '<span class="xa">$1</span>$2<span class="xv">$3</span>');
+          return '<span class="xt">' + open + '</span>' + highlightedAttrs + '<span class="xt">' + close + '</span>';
+        });
+    }
+
+    function copyXML() {
+      if (!currentXMLText) return;
+      navigator.clipboard.writeText(currentXMLText).then(() => {
+        const msg = document.getElementById('copy-confirm');
+        msg.style.display = 'inline';
+        setTimeout(() => msg.style.display = 'none', 2000);
+      });
+    }
+
+    /* init */
+    loadXML(0, document.querySelector('.xml-file-tab'));
+  </script>
+
 </body>
 </html>
