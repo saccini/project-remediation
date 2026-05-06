@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/xsd/tei_all.xsd" type="application/xml-xsd"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+        <titleStmt>
+            <title> <!-- title of the resource -->
+                img3
+            </title>
+            <respStmt>
+                <resp>Transcribed by</resp>
+                <name>Sachini Nissanka</name>
+            </respStmt>
+        </titleStmt>
+
+        <publicationStmt> <!-- Information about distribution of the resource -->
+            <publisher>Sachini Nissanka</publisher>
+            <date>2026</date>
+            <availability>
+                <p>
+                    This is an open access work licensed under a Creative Commons Attribution 4.0 International license.
+                </p>
+            </availability>
+        </publicationStmt>
+
+        <sourceDesc> <!-- Information about source from which the resource derives -->
+            <msDesc>
+                <msIdentifier>
+                    <country>Sweden</country>
+                    <settlement>Lund</settlement>
+                    <repository>Private collection</repository>
+                </msIdentifier>
+                <msContents>
+                    <msItem>
+                        <bibl>
+                            <title>Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734</title>
+                            <date>1736</date>
+                            <pubPlace>Stockholm</pubPlace>
+                            <publisher>Historiographi Regni Tryckerij</publisher>
+                        </bibl>
+                        <textLang mainLang="sv">Swedish</textLang>
+                    </msItem>       
+                </msContents>
+
+                <physDesc>
+                    <objectDesc form="codex">
+                        <supportDesc material="paper">
+                            <support>paper</support>
+                        </supportDesc>
+                    </objectDesc>
+
+                    <typeDesc>
+                        <typeNote>
+                            Printed in Fraktur typeface.
+                        </typeNote>
+                    </typeDesc>
+                </physDesc>
+            </msDesc>
+        </sourceDesc>
+    </fileDesc>
+
+    <profileDesc>
+        <langUsage>
+            <language ident="sv">Swedish as used in 18th century.</language>
+        </langUsage>
+    </profileDesc>
+
+    <encodingDesc>
+        <refsDecl xml:id="paragraphRule">
+            <p>
+                § symbols denotes a legal paragraph.
+            </p>
+        </refsDecl>
+        <tagsDecl>
+            <rendition xml:id="dropCap">
+                Starting capital letter of first paragraph. Spans 2 lines. 
+            </rendition>
+            <rendition xml:id="font" scheme="css">
+                font-family: Fraktur;
+            </rendition>
+            <rendition xml:id="indentFirst" scheme="css">
+                text-indent: 2em;
+            </rendition>
+        </tagsDecl>
+    </encodingDesc>
+  </teiHeader>
+
+  <text xml:lang="sv" rendition="font">
+    <body>
+        <pb n="254"/>
+        <fw type="pageNum" place="top-right">254</fw>
+        <fw type="header" place="top-center">Mißgiernings Balk.</fw>
+        <milestone unit="line" rend="horizontal-rule"/>
+        <div type="chapter"> 
+            <div type="paragraph" decls="#paragraphRule" n="5">
+                <p>
+                    <lb/>timmer och gärdsel; stånde tiufsrätt. Ar thet min-
+                    <lb break="no"/>dre; tå bötes, som om snatteri sägs.
+                </p>
+            </div>
+            <div type="paragraph" decls="#paragraphRule" n="6">
+                <p rendition="#indentFirst">
+                    <lb/>6. §. Hwar som bryter sig in i något rum, el-
+                    <lb break="no"/>ler hus, til at stiäla, ändoch han alsintet finner el-
+                    <lb break="no"/>ler tager; straffes första gången med nijo par spö,
+                    <lb/>eller sin par ris. Sker thet andra gången; ware
+                    <lb/>twegildt. Kommer han tridie gången åter; plichte
+                    <lb/>med tiugu sin par spö, eller tiugu ett par ris, och
+                    <lb/>fierde gången med tretijo ser par spd, eller tingusiu
+                    <lb/>par ris. Hafwer han ock tå något stulit; plichte
+                    <lb/>therföre särskilt, som förr sagdt är.
+                </p>
+            </div>
+            <div type="paragraph" decls="#paragraphRule" n="7">
+                <p rendition="#indentFirst">
+                    <lb/>7. §. Bryter tiuf sig in genom fenster, eller
+                    <lb/>eljest i gård och hus om nattetid, och får sår, eller
+                    <lb/>warder dräpen; ware ogildt. Sätter han sig til
+                    <lb/>motwärn, ehwad thet är natt, eller dag; ware lag
+                    <lb/>samma. Giör han them skada, som sitt wäria wil-
+                    <lb break="no"/>ja; ligge i tweböte, och plichte thertil för hemfrids
+                    <lb/>brott.
+                </p>
+            </div>
+            <div type="paragraph" decls="#paragraphRule" n="8">
+                <p rendition="#indentFirst">
+                    <lb/>8 §. Tager annar man tiufwen, än then,
+                    <lb/>som rätter målsägande är, eller godset wårda bor-
+                    <lb break="no"/>de; tå äger han tiugunde penningen af alt, thet
+                    <lb/>tiufwen ther hade med sig, som hans egit war.
+                </p>
+            </div>
+            <div type="paragraph" decls="#paragraphRule" n="9">
+                <p rendition="#indentFirst">
+                    <lb/>9. §. Wil ei målsäganden sielf anklaga tiuf-
+                    <lb break="no"/>wen for Rätta; käre tå then, som å Konungens
+                    <lb/>wägnar kära äger, och niute mälsägande rätt.
+                </p>
+                <fw type="catchword" place="bottom-right">10. §.</fw>
+            </div>
+        </div>
+    </body>
+  </text>
+</TEI>

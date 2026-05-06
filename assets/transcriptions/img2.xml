@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/xsd/tei_all.xsd" type="application/xml-xsd"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+        <titleStmt>
+            <title> <!-- title of the resource -->
+                img2
+            </title>
+            <respStmt>
+                <resp>Transcribed by</resp>
+                <name>Sachini Nissanka</name>
+            </respStmt>
+        </titleStmt>
+
+        <publicationStmt> <!-- Information about distribution of the resource -->
+            <publisher>Sachini Nissanka</publisher>
+            <date>2026</date>
+            <availability>
+                <p>
+                    This is an open access work licensed under a Creative Commons Attribution 4.0 International license.
+                </p>
+            </availability>
+        </publicationStmt>
+
+        <sourceDesc> <!-- Information about source from which the resource derives -->
+            <msDesc>
+                <msIdentifier>
+                    <country>Sweden</country>
+                    <settlement>Lund</settlement>
+                    <repository>Private collection</repository>
+                </msIdentifier>
+                <msContents>
+                    <msItem>
+                        <bibl>
+                            <title>Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734</title>
+                            <date>1736</date>
+                            <pubPlace>Stockholm</pubPlace>
+                            <publisher>Historiographi Regni Tryckerij</publisher>
+                        </bibl>
+                        <textLang mainLang="sv">Swedish</textLang>
+                    </msItem>       
+                </msContents>
+
+                <physDesc>
+                    <objectDesc form="codex">
+                        <supportDesc material="paper">
+                            <support>paper</support>
+                        </supportDesc>
+                    </objectDesc>
+
+                    <typeDesc>
+                        <typeNote>
+                            Printed in Fraktur typeface.
+                        </typeNote>
+                    </typeDesc>
+                </physDesc>
+            </msDesc>
+        </sourceDesc>
+    </fileDesc>
+
+    <profileDesc>
+        <langUsage>
+            <language ident="sv">Swedish as used in 18th century.</language>
+        </langUsage>
+    </profileDesc>
+
+    <encodingDesc>
+        <refsDecl xml:id="paragraphRule">
+            <p>
+                § symbols denotes a legal paragraph.
+            </p>
+        </refsDecl>
+        <tagsDecl>
+            <rendition xml:id="dropCap">
+                Starting capital letter of first paragraph. Spans 2 lines. 
+            </rendition>
+            <rendition xml:id="font" scheme="css">
+                font-family: Fraktur;
+            </rendition>
+            <rendition xml:id="indentFirst" scheme="css">
+                text-indent: 2em;
+            </rendition>
+        </tagsDecl>
+    </encodingDesc>
+  </teiHeader>
+
+  <text xml:lang="sv" rendition="font">
+    <body>
+        <pb n="253"/>
+        <fw type="header" place="top-center">Mißgiernings Balk.</fw>
+        <fw type="pageNum" place="top-right">253</fw>
+        <milestone unit="line" rend="horizontal-rule"/>
+        <div type="chapter"> 
+            <div type="paragraph" decls="#paragraphRule" n="2">
+                <p rendition="#indentFirst">
+                    <lb/> 2. §. Stiäl någor å flera ställen, än ett, eller 
+                    <lb/> på åtskilliga tider, och hafwer ei förr warit för tiuf
+                    <lb break="no"/>ad lagförd och straffad; tå skal om hwarje tiufnad
+                    <lb/>särskilt å sin ort ransakas, och ther pröfwas, om
+                    <lb/>han til tiufnaden saker är; gånge sedan Dom öfwer
+                    <lb/>tiufwen för altsamman, ther han sidst lagföres, och
+                    <lb/>plichtte, som then ther första gången stulit.
+                </p>
+            </div>
+            <div type="paragraph" decls="#paragraphRule" n="3">
+                <p rendition="#indentFirst">
+                    <lb/>3. §. Warder tiuf för stöld andra gången lag
+                    <lb break="no"/>förd; böte fyradubbelt tiufnadens wårde. Orkar
+                    <lb/>han ei böta; plichtte med kroppen, som sagdt är,
+                    <lb/>och tå ökes straffet med fem par spö, eller fyra par 
+                    <lb/>ris. Kommer han tridie gången åter, och stiger
+                    <lb/>tiufnaden til hundrade daler; warde hångd, ehwad
+                    <lb/>het är man, eller qwinna. Är tiufnaden mindre;
+                    <lb/>miste ej lifwet: utan plichtte med kroppen, efter stöl
+                    <lb break="no"/>dens wårde, och arbete i try åhr under Konungens
+                    <lb/>håchte. Stiäl han fierde gången; warde hångd.
+                </p>
+            </div>
+            <div type="paragraph" decls="#paragraphRule" n="4">
+                <p rendition="#indentFirst">
+                    <lb/>4. §. Alt thet stulit är, bör gåldas åter, förr
+                    <lb/>än böter uttagas. Gitter tiufwen thet ei; förnöje
+                    <lb/>målsåganden med arbete, når tiuf ei lif mister, el
+                    <lb break="no"/> ler til Konungens arbete dömd är.
+                </p>
+            </div>
+            <div type="paragraph" decls="#paragraphRule" n="5">
+                <p rendition="#indentFirst">
+                    <lb/>5. §. Stiäl någor frucht ur trägård, humle
+                    <lb break="no"/>gård, roswogård, eller kålgård, årter bönor,
+                    <lb/>ällion eller nötter til full mans bördo, el
+                    <lb break="no"/>er laß; eller stiäl och förer bort ett laß af annars huggen wed,
+                </p>
+                <fw type="signatureMark" place="bottom-center">Ii 3</fw> <!-- https://www.folger.edu/blogs/collation/deciphering-signature-marks/ -->
+                <fw type="catchword" place="bottom-right">tim</fw>
+            </div>
+        </div>
+    </body>
+  </text>
+</TEI>
