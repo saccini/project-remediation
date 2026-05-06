@@ -149,7 +149,7 @@ main {
 }
 
 .rule::after {
-  background: rgb(255, 255, 255); /* was rgb(190,190,190) — needs to match page bg */
+  background: rgb(255, 255, 255); 
   color: rgb(120, 120, 120);
 }
 
@@ -437,7 +437,6 @@ main {
   color: rgb(255, 255, 255);
 }
 
-/* override main max-width just for artefact page */
 .artefact-main {
   max-width: 80%;
   padding: 2rem 0 5rem 0;
@@ -445,7 +444,7 @@ main {
 
 .image-page-grid {
   display: grid;
-  grid-template-columns: 3fr 2fr;  /* image takes more space */
+  grid-template-columns: 3fr 2fr;  
   gap: 0;
   align-items: start;
   margin: 0;
@@ -458,11 +457,11 @@ main {
 .img-container {
   position: relative;
   width: 100%;
-  border: none;           /* remove border for full bleed feel */
+  border: none;           
   border-right: 1px solid rgb(220, 220, 220);
-  border-radius: 0;       /* remove rounded corners */
+  border-radius: 0;       
   overflow: hidden;
-  background: rgb(30, 30, 30);  /* dark bg like a viewer */
+  background: rgb(30, 30, 30);  
   cursor: crosshair;
 }
 
@@ -476,7 +475,7 @@ main {
   width: 100%;
   padding: 1.5rem 2rem;
   position: sticky;
-  top: 56px;             /* stick below the nav */
+  top: 56px;             
 }
 
 .meta-table {
@@ -543,7 +542,6 @@ main {
   color: rgb(255, 255, 255);
 }
 
-/* ── LIGHTBOX ── */
 .lightbox {
   display: none;
   position: fixed;
@@ -595,12 +593,10 @@ main {
   color: rgb(20, 20, 20);
 }
 
-/* zoom button in nav row */
 .zoom-btn {
   margin-left: auto;
 }
 
-/* ── PARAGRAPH BLOCKS (full transcription view) ── */
 .para-block {
   padding: 0.85rem 1.25rem;
   border-bottom: 1px solid rgb(235, 235, 235);
