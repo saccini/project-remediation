@@ -742,3 +742,33 @@ footer p {
     position: absolute; 
     z-index: 1000; 
 }
+/* --- NEW: 3-Column Image Gallery --- */
+.iteration-gallery {
+    display: grid;
+    /* This creates 3 equal-width columns */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Space between the images */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.gallery-item .caption {
+    text-align: center; /* Centers the caption under each image */
+    font-size: 0.85em;
+    margin-top: 8px;
+}
+
+/* Make it responsive for mobile devices */
+@media (max-width: 768px) {
+    .iteration-gallery {
+        /* On small screens, stack the images 1 on top of the other */
+        grid-template-columns: 1fr; 
+    }
+}

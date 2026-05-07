@@ -11,14 +11,22 @@ class MetadataModal {
     }
 
     init() {
+        // 1. Open modal when clicking an image
         this.metaImages.forEach(img => {
-            img.addEventListener("click", (event) => this.openModal(event.target));
+            img.addEventListener("click", (event) => {
+                // This stops the click from "bubbling up" to the window immediately
+                event.stopPropagation(); 
+                this.openModal(event.target);
+            });
         });
 
+        // 2. Close modal when clicking the neon green X
         this.closeBtn.addEventListener("click", () => this.closeModal());
         
+        // 3. NEW: Close modal when clicking ANYWHERE else on the screen
         window.addEventListener("click", (event) => {
-            if (event.target === this.modal) {
+            // Check if the modal is currently open AND the user clicked outside of it
+            if (this.modal.style.display === "block" && !this.modal.contains(event.target)) {
                 this.closeModal();
             }
         });
@@ -28,21 +36,37 @@ class MetadataModal {
         const xmlFilePath = clickedImage.dataset.xmlSrc;
         this.codeBlock.textContent = "Fetching XML data...";
         
-        // --- NEW: Calculate exact position ---
+        // 1. Temporarily show the modal way off-screen so the browser 
+        // can calculate its actual width (which is around 600px)
+        this.modal.style.left = "-9999px";
+        this.modal.style.display = "block";
+        
+        // 2. Get the dimensions of the clicked image and the modal
         const rect = clickedImage.getBoundingClientRect();
+        const modalWidth = this.modal.offsetWidth; 
         
-        // Calculate the 'left' position: Right edge of the image + 20px of breathing room
-        const calculatedLeft = rect.right + 20;
+        // 3. Default position: Right side of the image
+        let calculatedLeft = rect.right + 20;
         
-        // Calculate the 'top' position: Top edge of the image + how far the user has scrolled down
+        // 4. THE FIX: Check if popping to the right pushes it off the screen
+        // window.innerWidth is the total width of the user's browser window
+        if (calculatedLeft + modalWidth > window.innerWidth) {
+            
+            // It bleeds off the right! Calculate position for the LEFT side instead
+            calculatedLeft = rect.left - modalWidth - 20;
+        }
+        
+        // 5. Mobile Failsafe: What if the screen is so small it bleeds off the left too?
+        if (calculatedLeft < 10) {
+            calculatedLeft = 10; // Pin it 10px from the left edge of the screen
+        }
+
+        // Calculate the top position (same as before)
         const calculatedTop = rect.top + window.scrollY;
 
-        // Apply coordinates to the modal
+        // Apply the final, safe coordinates
         this.modal.style.left = `${calculatedLeft}px`;
         this.modal.style.top = `${calculatedTop}px`;
-        
-        // Show the modal
-        this.modal.style.display = "block";
 
         // Fetch the XML file
         if (xmlFilePath) {
@@ -64,8 +88,6 @@ class MetadataModal {
 
     closeModal() {
         this.modal.style.display = "none";
-        
-        // Reset the position so it doesn't accidentally flash in the wrong spot next time
         this.modal.style.left = "-9999px"; 
     }
 }
