@@ -157,12 +157,10 @@ const allZones = [
   ],
 ];
 
-/* ── STATE ── */
 let currentImg   = 0;
 let selectedZone = 0;
 let currentTab   = 'original';
 
-/* ── BUILD ZONES IN DOM ── */
 function renderZones(pageIndex) {
   const overlay = document.getElementById('zone-overlay');
   overlay.innerHTML = '';
@@ -176,7 +174,6 @@ function renderZones(pageIndex) {
   });
 }
 
-/* ── IMAGE NAVIGATOR ── */
 function changeImage(dir) {
   currentImg = Math.max(0, Math.min(images.length - 1, currentImg + dir));
   const data = images[currentImg];
@@ -196,7 +193,6 @@ function changeImage(dir) {
   selectZone(0);
 }
 
- /* ── ZONE CLICK ── */
 function selectZone(i) {
   if (typeof responsiveVoice !== 'undefined') stopSpeech();
   document.querySelectorAll('.zone').forEach(z => z.classList.remove('active'));
@@ -206,7 +202,6 @@ function selectZone(i) {
   showTranslation();
 }
 
-/* ── TABS ── */
 function switchTab(btn) {
   if (typeof responsiveVoice !== 'undefined') stopSpeech();
   currentTab = btn.dataset.tab;
@@ -245,7 +240,7 @@ function showTranslation() {
   el.className = 'trans-body';
 }
 
-/* ── TEXT TO SPEECH ── */
+
 function toggleSpeech() {
   if (typeof responsiveVoice === 'undefined') {
     alert('Text to speech is not available right now. Please check your internet connection.');
@@ -288,7 +283,6 @@ function stopSpeech() {
   document.getElementById('tts-btn').classList.remove('speaking');
 }
 
-/* ── LIGHTBOX ── */
 function openLightbox() {
   const src = document.getElementById('main-img').src;
   const alt = document.getElementById('main-img').alt;
@@ -303,12 +297,10 @@ function closeLightbox() {
   document.body.style.overflow = '';
 }
 
-/* close lightbox with Escape key */
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeLightbox();
 });
 
-/* ── INIT ── */
 document.getElementById('img-counter').textContent = '1 / ' + images.length;
 renderZones(0);
 selectZone(0);

@@ -6,89 +6,252 @@
   <title>Multimodality Remediation Project</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="metadata.js" defer></script>
+  <style>
+    .page-header a {
+      color: rgb(200, 200, 200);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s;
+    }
+
+    .page-header a:hover { color: rgb(255, 255, 255); }
+
+    .meta-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin-top: 1rem;
+    }
+
+    .meta-table tr { border-bottom: 1px solid rgb(220, 220, 220); }
+    .meta-table tr:first-child { border-top: 1px solid rgb(220, 220, 220); }
+
+    .meta-table td {
+      padding: 0.6rem 0;
+      vertical-align: top;
+    }
+
+    .meta-table td:first-child {
+      font-family: "Space Mono", monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: rgb(20, 20, 20);
+      width: 180px;
+      padding-right: 1rem;
+      padding-top: 0.75rem;
+    }
+
+    .meta-table td:last-child { color: rgb(60, 60, 60); }
+
+    .workspace-layout {
+  grid-template-columns: 2fr 3fr;
+}
+
+    @media (max-width: 700px) {
+      .workspace-layout { grid-template-columns: 1fr; }
+    }
+
+    .workspace-image {
+  position: relative;
+  min-height: 100%;
+}
+
+    .workspace-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+    .workspace-image img:hover { opacity: 0.88; }
+
+    .img-click-hint {
+      font-family: "Space Mono", monospace;
+      font-size: 0.65rem;
+      color: rgb(120, 120, 120);
+      letter-spacing: 0.05em;
+      margin-top: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .img-click-hint::before {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border: 1.5px dashed rgb(20, 20, 20);
+      border-radius: 1px;
+      flex-shrink: 0;
+    }
+
+    .metadata-panel {
+      border: 1px solid rgb(220, 220, 220);
+      border-radius: 2px;
+      overflow: hidden;
+      display: none; 
+    }
+
+    .metadata-panel.visible { display: block; }
+
+    .metadata-panel-toolbar {
+      background: rgb(20, 20, 20);
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .metadata-panel-title {
+      font-family: "Space Mono", monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgb(160, 160, 160);
+    }
+
+    .metadata-panel-close {
+      font-family: "Space Mono", monospace;
+      font-size: 0.72rem;
+      color: rgb(160, 160, 160);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      line-height: 1;
+      transition: color 0.15s;
+    }
+
+    .metadata-panel-close:hover { color: rgb(255, 255, 255); }
+
+    .metadata-panel pre {
+      margin: 0;
+      padding: 1rem 1.25rem;
+      font-family: "Space Mono", monospace;
+      font-size: 0.72rem;
+      line-height: 1.8;
+      color: rgb(60, 60, 60);
+      background: rgb(250, 250, 250);
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+      max-height: 420px;
+      overflow-y: auto;
+    }
+
+    .caption {
+      font-family: "Space Mono", monospace;
+      font-size: 0.65rem;
+      color: rgb(120, 120, 120);
+      letter-spacing: 0.04em;
+      margin-top: 0.4rem;
+    }
+
+    .iteration-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="nav-logo">Remediation <span>Project</span></a>
-        <ul class="nav-links">
-            <li><a href="index.html">Background</a></li>
-            <li><a href="process.html" class="active">Process</a></li>
-            <li><a href="artefact.html">Artefact</a></li>
-            <li><a href="metadata.html">Metadata</a></li>
-            <li><a href="teixml.html">TEI-XML</a></li>
-            <li><a href="references.html">References</a></li>
-        </ul>
-    </nav>
-    
-    <header class="page-header">
-        <div class="page-header-inner">
-            <h1>The digitization<br><em>process</em></h1>
-            <p>This page describes the process of digitizing the document.
-                We went through several iterations of this process that we have documented
-                below, but if you are only interested in the final setup you can skip it by 
-                <!-- This anchor link points to the ID of the final section -->
-                <a href="#final-setup">clicking here</a>.
-            </p>
-        </div>
-    </header>
-    
-    <main>
-        <!-- Materials List Section -->
-        <section>
-            <span class="topic">Overview</span>
-            <div class="bodytext">
-                <h2>Materials & Equipment</h2>
-                <p>Before beginning the iterations, we gathered the following equipment for the archival process:</p>
-                <p><br><em>note that some materials were added between iterations in which case the items after that iteration is mentioned was also added during that iteration. </em></p>
-                <ul>
-                    <li>[Cameras]</li>
-                    <li>Iphone pro 11</li>
-                    <li>Samsung Galaxy S24 Ultra</li>
-                    <li>[Lighting equipment]</li>
-                    <li>Two 1,9W LED lights from the IKEA Nävlige series</li>
-                    <li>[Golves]</li>
-                    <li>White cotton gloves were always used when handling the document</li>
-                    <li>[Background <em>2nd iteration onwards</em>]</li>
-                    <li>Exibel mouse mat (Neutral gray)</li>
-                    <li>[Tape]</li>
-                    <li>Electircal tape & Extra strong Duct-tape</li>
-                    <li>[Tape measure]</li>
-                    <li>Hard head purple 3m roll measurer</li>
-                    <li>[Paper <em>3rd iteration onwards</em>]</li>
-                    <li>1 A2 paper from panduro cut in half to reflect even light</li>
-                    <li>[Light stand]</li>
-                    <li>1 kitchen chair clipping the lamps onto the back</li>
-                    <li>[Miscellaneous]</li>
-                    <li>Stainless steel scisors</li>
-                    <li>Water leveler</li>
-                    <li>[Software used for processing]</li>
-                    <li>Gimp 2.10 (Windows)</li>
-                    <li>Greenshot 1.2.10 Build 6 (64bit)</li>
-                </ul>
-            </div>
-        <!-- ... Inside your Overview section ... -->
-    <div class="workspace-layout">
-        <!-- Left Column: The Image -->
+  <nav>
+    <a href="index.html" class="nav-logo">Remediation <span>Project</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Background</a></li>
+      <li><a href="process.html" class="active">Process</a></li>
+      <li><a href="artefact.html">Artefact</a></li>
+      <li><a href="metadata.html">Metadata</a></li>
+      <li><a href="teixml.html">TEI-XML</a></li>
+      <li><a href="references.html">References</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <h1>The digitisation<br><em>process</em></h1>
+      <p>
+        This page describes the process of digitising the document.
+        We went through several iterations of this process that we have documented
+        below, but if you are only interested in the final setup you can skip ahead by
+        <a href="#final-setup">clicking here</a>.
+      </p>
+    </div>
+  </header>
+
+  <main>
+
+    <div>
+      <span class="topic">Materials &amp; Equipment</span>
+      <div class="bodytext">
+        <p>Before beginning the iterations, we gathered the following equipment for the archival process.</p>
+        <p>Note that some materials were added between iterations — items added after a particular iteration are noted accordingly.</p>
+      </div>
+
+      <table class="meta-table">
+        <tr><td>Cameras</td><td>iPhone Pro 11 / Samsung Galaxy S24 Ultra</td></tr>
+        <tr><td>Lighting</td><td>Two 1.9W LED lights from the IKEA Nävlige series</td></tr>
+        <tr><td>Gloves</td><td>White cotton gloves — always worn when handling the document</td></tr>
+        <tr><td>Background</td><td>Exibel mouse mat (neutral gray) — 2nd iteration onwards</td></tr>
+        <tr><td>Tape</td><td>Electrical tape &amp; extra strong duct tape</td></tr>
+        <tr><td>Tape measure</td><td>Hard Head purple 3m roll measurer</td></tr>
+        <tr><td>Paper</td><td>1 A2 sheet from Panduro, cut in half to reflect even light — 3rd iteration onwards</td></tr>
+        <tr><td>Light stand</td><td>Kitchen chair with lamps clipped onto the back</td></tr>
+        <tr><td>Miscellaneous</td><td>Stainless steel scissors / water leveller</td></tr>
+        <tr><td>Software</td><td>GIMP 2.10 (Windows) for image processing</td></tr>
+      </table>
+    </div>
+
+    <hr class="rule">
+
+    <div>
+      <span class="topic">Workspace Environment</span>
+
+      <div class="workspace-layout">
+
         <div class="workspace-image">
-            <img src="assets/images/Work_areawmetadata.jpeg" 
-                 alt="Our night-time digitisation workspace" 
-                 class="metadata-image"
-                 data-xml-src="assets/images/metadataWork_area.xml">
-            <p class="caption"><em>Click image for XML metadata.</em></p>
+          <img
+            src="assets/images/Work_areawmetadata.jpeg"
+            alt="Our night-time digitisation workspace"
+            onclick="openMetadataPanel()"
+            title="Click to view GIMP metadata"
+          >
+          <p class="img-click-hint">Click image to view GIMP metadata.</p>
+          <p class="caption">Fig. — Night-time digitisation workspace, 2026</p>
         </div>
 
-        <!-- Right Column: The Description -->
-        <div class="workspace-text">
-            <h3>Workspace Environment</h3>
-            <p>All pictures were taken at night to limit light pollution from other sources. This meant that once we realized that we would be
-                unable to continue with the photography session due to some materials missing we had to wait
-                for the sun to set again. This meant that these images were taken between the 29/04-04/05-2026.
+        <div>
+          <div class="bodytext">
+            <p>
+              All pictures were taken at night to limit light pollution from other sources.
+              This meant that once we realised we would be unable to continue a photography
+              session due to missing materials, we had to wait for the sun to set again.
+              As a result, the images were taken between 29/04 and 04/05 2026.
             </p>
-        </div>
+          </div>
+          <p>
+            <div class="metadata-panel" id="metadata-panel">
+  <div class="xml-box">
+    <div class="xml-box-toolbar">
+      <span class="xml-box-filename">metadataWork_area.xml</span>
+      <div class="xml-box-actions">
+        <button class="metadata-panel-close xml-copy-btn" onclick="closeMetadataPanel()">&times; Close</button>
+      </div>
     </div>
-    
-</section>
+    <div class="xml-content" id="metadata-content">Loading...</div>
+  </div>
+</div>
+          </p>
+        </div>
+
+      </div>
+    </div>
 
 <hr class="rule">
 
@@ -150,46 +313,67 @@
                 </div>
             </div>
         </section>
-        
-        <hr class="rule">
-        
-        <!-- Iteration 2 -->
-        <section>
-            <span class="topic">Iteration 2</span>
-            <div class="bodytext">
-                <h2>Adjusting the Environment</h2>
-                <p>
-                    [Describe the second attempt based on what you learned from the first. E.g., Moving the lights, changing camera settings, or adjusting the artefact's position.]
-                </p>
-            </div>
-        </section>
-        
-        <hr class="rule">
-        
-        <!-- Iteration 3 (Target for the skip link) -->
-        <section id="final-setup">
-            <span class="topic">Iteration 3</span>
-            <div class="bodytext">
-                <h2>The Final Setup & Post-processing</h2>
-                <p>
-                    [Describe the successful, final setup. Include the final lighting angles, distance from camera to objects, and the pre/post-processing adjustments you made to the images.]
-                </p>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <p>Multimodality: Narrative and Context in Different Media Formats · University of Borås · 2026</p>
-        <p>Sachini Nissanka · Erik Lundahl</p>
-    </footer>
 
-    <div    id="metadata-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h3>GIMP XML Metadata</h3>
-            <!-- <pre> and <code> tags are standard for displaying formatted code -->
-            <pre><code id="metadata-code-block">Loading...</code></pre>
-        </div>
-    </div>
+    <hr class="rule">
+
+    <section>
+      <span class="topic">Iteration 2</span>
+      <div class="bodytext">
+        <h2>Adjusting the Environment</h2>
+        <p>
+          [Describe the second attempt based on what you learned from the first —
+          moving the lights, changing camera settings, or adjusting the artefact's position.]
+        </p>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section id="final-setup">
+      <span class="topic">Iteration 3</span>
+      <div class="bodytext">
+        <h2>The Final Setup &amp; Post-processing</h2>
+        <p>
+          [Describe the successful, final setup — final lighting angles, distance from
+          camera to object, and the pre/post-processing adjustments made in GIMP.]
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Multimodality: Narrative and Context in Different Media Formats · University of Borås · 2026</p>
+    <p>Sachini Nissanka · Erik Lundahl</p>
+  </footer>
+
+  <script>
+    function openMetadataPanel() {
+      const panel   = document.getElementById('metadata-panel');
+      const content = document.getElementById('metadata-content');
+
+      panel.classList.add('visible');
+      content.textContent = 'Loading...';
+
+      fetch('assets/images/metadataWork_area.xml')
+        .then(res => {
+          if (!res.ok) throw new Error('File not found');
+          return res.text();
+        })
+        .then(text => {
+          content.textContent = text;
+        })
+        .catch(() => {
+          content.textContent =
+            'Could not load metadata file.\n' +
+            'Make sure assets/images/metadataWork_area.xml exists.';
+        });
+    }
+
+    function closeMetadataPanel() {
+      document.getElementById('metadata-panel').classList.remove('visible');
+    }
+  </script>
+
 </body>
 </html>
