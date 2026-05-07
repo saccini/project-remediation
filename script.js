@@ -240,6 +240,7 @@ function showTranslation() {
   el.className = 'trans-body';
 }
 
+
 function toggleSpeech() {
   if (typeof responsiveVoice === 'undefined') {
     alert('Text to speech is not available right now. Please check your internet connection.');
