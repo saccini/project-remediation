@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gimp-metadata>
+    <!-- Dublin Core (DC) Standard -->
+    <xmp-tag>
+        <tag-name>Xmp.dc.title</tag-name>
+        <tag-mode>single</tag-mode>
+        <tag-value>It1_gloves</tag-value>
+    </xmp-tag>
+    <xmp-tag>
+        <tag-name>Xmp.dc.creator</tag-name>
+        <tag-mode>single</tag-mode>
+        <tag-value>Erik Lundahl</tag-value>
+    </xmp-tag>
+    <xmp-tag>
+        <tag-name>Xmp.dc.description</tag-name>
+        <tag-mode>multi</tag-mode>
+        <tag-value>Picture of Erik putting on cotton gloves to handle
+the book document. In the cupboard on the left we can see the document
+(Sweriges rikes lag 1734) being lit up by two lamps.</tag-value>
+    </xmp-tag>
+
+    <!-- People and Location Data -->
+    <xmp-tag>
+        <tag-name>Xmp.iptcExt.PersonInImage</tag-name>
+        <tag-mode>multi</tag-mode>
+        <tag-value>Erik Lundahl</tag-value>
+    </xmp-tag>
+    <xmp-tag>
+        <tag-name>Xmp.iptcExt.City</tag-name>
+        <tag-mode>single</tag-mode>
+        <tag-value>Stockholm</tag-value>
+    </xmp-tag>
+    <xmp-tag>
+        <tag-name>Xmp.iptcExt.CountryName</tag-name>
+        <tag-mode>single</tag-mode>
+        <tag-value>Sweden</tag-value>
+    </xmp-tag>
+    <xmp-tag>
+        <tag-name>Xmp.iptcExt.CountryCode</tag-name>
+        <tag-mode>single</tag-mode>
+        <tag-value>SE</tag-value>
+    </xmp-tag>
+    <xmp-tag>
+        <tag-name>Xmp.iptcExt.WorldRegion</tag-name>
+        <tag-mode>single</tag-mode>
+        <tag-value>Europe</tag-value>
+    </xmp-tag>
+
+    <!-- Camera & Technical Info -->
+    <xmp-tag>
+        <tag-name>Xmp.iptcExt.AddlModelInfo</tag-name>
+        <tag-mode>multi</tag-mode>
+        <tag-value>Equipment: iPhone 11 pro, normal camera mode (wideview - 26mm f/1.8), no flash, 12MP, ISO 250, 0EV, 1/50s. Device age at capture: 6.5 years.</tag-value>
+    </xmp-tag>
+
+    <!-- GPS EXIF Data -->
+    <xmp-tag>
+        <tag-name>Exif.GPSInfo.GPSLongitude</tag-name>
+        <tag-mode>single</tag-mode>
+        <tag-value>59deg 18' 1"</tag-value>
+    </xmp-tag>
+    <xmp-tag>
+        <tag-name>Exif.GPSInfo.GPSLatitude</tag-name>
+        <tag-mode>single</tag-mode>
+        <tag-value>17deg 59' 5"</tag-value>
+    </xmp-tag>
+    <xmp-tag>
+        <tag-name>Exif.GPSInfo.GPSAltitude</tag-name>
+        <tag-mode>single</tag-mode>
+        <tag-value>0.0</tag-value>
+    </xmp-tag>
+</gimp-metadata>

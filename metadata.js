@@ -5,20 +5,23 @@ class MetadataModal {
         this.codeBlock = document.getElementById("metadata-code-block");
         this.metaImages = document.querySelectorAll(".metadata-image");
 
-        if (this.modal) {
+        if (this.modal && this.codeBlock) {
             this.init();
         }
     }
 
     init() {
         this.metaImages.forEach(img => {
-            img.addEventListener("click", (event) => this.openModal(event.target));
+            img.addEventListener("click", (event) => {
+                event.stopPropagation(); 
+                this.openModal(event.target);
+            });
         });
 
         this.closeBtn.addEventListener("click", () => this.closeModal());
         
         window.addEventListener("click", (event) => {
-            if (event.target === this.modal) {
+            if (this.modal.style.display === "block" && !this.modal.contains(event.target)) {
                 this.closeModal();
             }
         });
@@ -26,25 +29,29 @@ class MetadataModal {
 
     openModal(clickedImage) {
         const xmlFilePath = clickedImage.dataset.xmlSrc;
-        this.codeBlock.textContent = "Fetching XML data...";
         
-        // --- NEW: Calculate exact position ---
+        // Use innerHTML instead of textContent since we will be injecting HTML spans
+        this.codeBlock.innerHTML = '<div class="xml-loading">Fetching XML data...</div>';
+        
+        this.modal.style.left = "-9999px";
+        this.modal.style.display = "block";
+        
         const rect = clickedImage.getBoundingClientRect();
+        const modalWidth = this.modal.offsetWidth; 
         
-        // Calculate the 'left' position: Right edge of the image + 20px of breathing room
-        const calculatedLeft = rect.right + 20;
+        let calculatedLeft = rect.right + 20;
         
-        // Calculate the 'top' position: Top edge of the image + how far the user has scrolled down
+        if (calculatedLeft + modalWidth > window.innerWidth) {
+            calculatedLeft = rect.left - modalWidth - 20;
+        }
+        
+        if (calculatedLeft < 10) calculatedLeft = 10; 
+
         const calculatedTop = rect.top + window.scrollY;
 
-        // Apply coordinates to the modal
         this.modal.style.left = `${calculatedLeft}px`;
         this.modal.style.top = `${calculatedTop}px`;
-        
-        // Show the modal
-        this.modal.style.display = "block";
 
-        // Fetch the XML file
         if (xmlFilePath) {
             fetch(xmlFilePath)
                 .then(response => {
@@ -52,21 +59,39 @@ class MetadataModal {
                     return response.text();
                 })
                 .then(xmlText => {
-                    this.codeBlock.textContent = xmlText;
+                    // NEW: Pass the text through the formatting functions!
+                    this.codeBlock.innerHTML = this.syntaxHighlight(this.escapeHTML(xmlText));
                 })
                 .catch(error => {
-                    this.codeBlock.textContent = `Error loading metadata:\n${error.message}`;
+                    this.codeBlock.innerHTML = `<div class="xml-error">Error loading metadata:<br>${error.message}</div>`;
                 });
         } else {
-            this.codeBlock.textContent = "Error: No XML file path provided.";
+            this.codeBlock.innerHTML = '<div class="xml-error">Error: No XML file path provided.</div>';
         }
     }
 
     closeModal() {
         this.modal.style.display = "none";
-        
-        // Reset the position so it doesn't accidentally flash in the wrong spot next time
         this.modal.style.left = "-9999px"; 
+    }
+
+    // --- NEW FORMATTING HELPER FUNCTIONS ---
+    escapeHTML(str) {
+        return str
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;');
+    }
+
+    syntaxHighlight(str) {
+        return str
+            .replace(/(&lt;!--[\s\S]*?--&gt;)/g, '<span class="xc">$1</span>')
+            .replace(/(&lt;\/?[\w:]+)([\s\S]*?)(\/?&gt;)/g, function(m, open, attrs, close) {
+                const highlightedAttrs = attrs.replace(/([\w:]+)(=)(&quot;[^&]*&quot;)/g,
+                    '<span class="xa">$1</span>$2<span class="xv">$3</span>');
+                return '<span class="xt">' + open + '</span>' + highlightedAttrs + '<span class="xt">' + close + '</span>';
+            });
     }
 }
 

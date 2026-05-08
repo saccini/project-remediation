@@ -6,7 +6,11 @@
   <title>Multimodality Remediation Project</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  
+  <script src="metadata.js" defer></script>
+  
   <style>
+    /* Kept your colleague's clean styling for the tables and layout */
     .page-header a {
       color: rgb(200, 200, 200);
       text-decoration: underline;
@@ -44,28 +48,28 @@
     .meta-table td:last-child { color: rgb(60, 60, 60); }
 
     .workspace-layout {
-  grid-template-columns: 2fr 3fr;
-}
+      grid-template-columns: 2fr 3fr;
+    }
 
     @media (max-width: 700px) {
       .workspace-layout { grid-template-columns: 1fr; }
     }
 
     .workspace-image {
-  position: relative;
-  min-height: 100%;
-}
+      position: relative;
+      min-height: 100%;
+    }
 
     .workspace-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border: 1px solid rgb(180, 180, 180);
-  border-radius: 2px;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border: 1px solid rgb(180, 180, 180);
+      border-radius: 2px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
 
     .workspace-image img:hover { opacity: 0.88; }
 
@@ -88,60 +92,6 @@
       border: 1.5px dashed rgb(20, 20, 20);
       border-radius: 1px;
       flex-shrink: 0;
-    }
-
-    .metadata-panel {
-      border: 1px solid rgb(220, 220, 220);
-      border-radius: 2px;
-      overflow: hidden;
-      display: none; 
-    }
-
-    .metadata-panel.visible { display: block; }
-
-    .metadata-panel-toolbar {
-      background: rgb(20, 20, 20);
-      padding: 0.5rem 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .metadata-panel-title {
-      font-family: "Space Mono", monospace;
-      font-size: 0.65rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgb(160, 160, 160);
-    }
-
-    .metadata-panel-close {
-      font-family: "Space Mono", monospace;
-      font-size: 0.72rem;
-      color: rgb(160, 160, 160);
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      line-height: 1;
-      transition: color 0.15s;
-    }
-
-    .metadata-panel-close:hover { color: rgb(255, 255, 255); }
-
-    .metadata-panel pre {
-      margin: 0;
-      padding: 1rem 1.25rem;
-      font-family: "Space Mono", monospace;
-      font-size: 0.72rem;
-      line-height: 1.8;
-      color: rgb(60, 60, 60);
-      background: rgb(250, 250, 250);
-      overflow-x: auto;
-      white-space: pre-wrap;
-      word-break: break-word;
-      max-height: 420px;
-      overflow-y: auto;
     }
 
     .caption {
@@ -186,7 +136,6 @@
   </header>
 
   <main>
-
     <div>
       <span class="topic">Materials &amp; Equipment</span>
       <div class="bodytext">
@@ -212,14 +161,13 @@
 
     <div>
       <span class="topic">Workspace Environment</span>
-
       <div class="workspace-layout">
-
         <div class="workspace-image">
           <img
             src="assets/images/Work_areawmetadata.jpeg"
             alt="Our night-time digitisation workspace"
-            onclick="openMetadataPanel()"
+            class="metadata-image"
+            data-xml-src="assets/images/metadataWork_area.xml"
             title="Click to view GIMP metadata"
           >
           <p class="img-click-hint">Click image to view GIMP metadata.</p>
@@ -235,60 +183,135 @@
               As a result, the images were taken between 29/04 and 04/05 2026.
             </p>
           </div>
-          <p>
-            <div class="metadata-panel" id="metadata-panel">
-  <div class="xml-box">
-    <div class="xml-box-toolbar">
-      <span class="xml-box-filename">metadataWork_area.xml</span>
-      <div class="xml-box-actions">
-        <button class="metadata-panel-close xml-copy-btn" onclick="closeMetadataPanel()">&times; Close</button>
-      </div>
-    </div>
-    <div class="xml-content" id="metadata-content">Loading...</div>
-  </div>
-</div>
-          </p>
         </div>
-
       </div>
     </div>
 
     <hr class="rule">
 
     <section>
-      <span class="topic">Iteration 1</span>
-      <div class="bodytext">
-        <h2>Initial Setup &amp; Testing</h2>
-        <p>
-          [Describe the first attempt — how was the lighting positioned? What went wrong?
-          Was there glare, shadow, or distortion?]
-        </p>
-      </div>
+        <span class="topic">Iteration 1</span>
+        <div class="bodytext">
+            <h2>Initial Setup & Testing</h2>
+            <p>
+                <ul>
+                <li><b>Size of workarea</b></li>
+                <li>Width: 56.5 cm</li>
+                <li>Depth: 38 cm</li>
+                <li>Height: 40.5 cm</li>
+                </ul>
+            </p>
+            The initial idea was to use the cupboard as the space for the digitisation in order to 
+            focus the light to a specific area and to use the white walls to spread an even light (Davis Kronlund, 2021c).
+            Another reason for this choice was that the phone could be fitted in the cealing of the cupboard
+            so that we would get a consistent height of the images.
+
+            Unfortunatley (and quite predictably) it was impossible to focus the camera once it was flush against the cealing. The workspace
+            was also too small to allow for any comparison shots.
+
+            <div class="iteration-gallery">
+                <div class="gallery-item">
+                    <img src="assets/images/It1_gloveswithmetadata.jpeg" 
+                         alt="Putting on cotton gloves" 
+                         class="metadata-image"
+                         data-xml-src="assets/images/It1_glovesmetadata.xml"
+                         title="Click to view GIMP metadata"> <p class="caption"><em>Click image for XML metadata</em></p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/images/It1_adjustlight.jpeg" 
+                         alt="Adjusting the lights" 
+                         class="metadata-image"
+                         data-xml-src="assets/images/It1_adjustlightpmetadata.xml"
+                         title="Click to view GIMP metadata"> <p class="caption"><em>Click image for XML metadata</em></p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/images/It1_readdoc.jpeg" 
+                         alt="Reading the document" 
+                         class="metadata-image"
+                         data-xml-src="assets/images/It1_readdocmetadata.xml"
+                         title="Click to view GIMP metadata"> <p class="caption"><em>Click image for XML metadata</em></p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <hr class="rule">
 
     <section>
-      <span class="topic">Iteration 2</span>
-      <div class="bodytext">
-        <h2>Adjusting the Environment</h2>
-        <p>
-          [Describe the second attempt based on what you learned from the first —
-          moving the lights, changing camera settings, or adjusting the artefact's position.]
-        </p>
-      </div>
+        <span class="topic">Iteration 2</span>
+        <div class="bodytext">
+            <h2>Adjusting the Environment</h2>
+            <p>
+                <ul>
+                <li><b>Size of workarea</b></li>
+                <li>Width: 90 cm</li>
+                <li>Depth: 40 cm</li>
+                <li>Height: 102 cm</li>
+                </ul>
+            </p>
+            <p>
+                [Describe the second attempt based on what you learned from the first. E.g., Moving the lights, changing camera settings, or adjusting the artefact's position.]
+            </p>
+
+            <div class="iteration-gallery mixed-col">
+                <div class="gallery-item">
+                    <img src="assets/images/It2_nogowmetadata.jpeg" 
+                         alt="Highlighting the move to the new area" 
+                         class="metadata-image"
+                         data-xml-src="assets/images/It2_nogometadata.xml"
+                         title="Click to view GIMP metadata"> <p class="caption"><em>Click image for XML metadata</em></p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/images/It2_displaywmetadata.jpeg" 
+                         alt="Overview of the 2nd iteration workspace" 
+                         class="metadata-image"
+                         data-xml-src="assets/images/It2_displaymetadata.xml"
+                         title="Click to view GIMP metadata"><p class="caption"><em>Click image for XML metadata</em></p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <hr class="rule">
 
     <section id="final-setup">
       <span class="topic">Iteration 3</span>
-      <div class="bodytext">
-        <h2>The Final Setup &amp; Post-processing</h2>
-        <p>
-          [Describe the successful, final setup — final lighting angles, distance from
-          camera to object, and the pre/post-processing adjustments made in GIMP.]
-        </p>
+      
+      <div class="workspace-layout">
+          <div class="workspace-image">
+              <img src="assets/images/It3_finalsetupwmetadata.jpeg" 
+                   alt="Final setup of the digitisation process" 
+                   class="metadata-image"
+                   data-xml-src="assets/images/It3_finalsetupmetadata.xml"
+                   title="Click to view GIMP metadata">
+              <p class="caption"><em>Click image for XML metadata</em></p>
+          </div>
+
+          <div class="workspace-text">
+              <h2>The Final Setup &amp; Post-processing</h2>
+              <p>
+                <ul>
+                <li><b>Size of workarea</b></li>
+                <li>Width: 90 cm</li>
+                <li>Depth: 40 cm</li>
+                <li>Height: 102 cm</li>
+                </ul>
+            </p>
+              <p>
+                [Describe the successful, final setup — final lighting angles, distance from
+                camera to object, and the pre/post-processing adjustments made in GIMP.]
+              </p>
+          </div>
+      </div>
+
+      <div class="bodytext" style="margin-top: 3rem;">
+          <h2>Reflection</h2>
+          <p>
+              [Add your reflections on the entire digitisation process here. For example: what proved to be the most challenging aspect? How did your setup evolve from Iteration 1 to 3? What would you do differently if you had access to a professional archival studio?]
+          </p>
       </div>
     </section>
 
@@ -299,33 +322,17 @@
     <p>Sachini Nissanka · Erik Lundahl</p>
   </footer>
 
-  <script>
-    function openMetadataPanel() {
-      const panel   = document.getElementById('metadata-panel');
-      const content = document.getElementById('metadata-content');
-
-      panel.classList.add('visible');
-      content.textContent = 'Loading...';
-
-      fetch('assets/images/metadataWork_area.xml')
-        .then(res => {
-          if (!res.ok) throw new Error('File not found');
-          return res.text();
-        })
-        .then(text => {
-          content.textContent = text;
-        })
-        .catch(() => {
-          content.textContent =
-            'Could not load metadata file.\n' +
-            'Make sure assets/images/metadataWork_area.xml exists.';
-        });
-    }
-
-    function closeMetadataPanel() {
-      document.getElementById('metadata-panel').classList.remove('visible');
-    }
-  </script>
+  <div id="metadata-modal" class="modal">
+      <div class="modal-content xml-box">
+          <div class="xml-box-toolbar">
+              <span class="xml-box-filename">GIMP XML METADATA</span>
+              <div class="xml-box-actions">
+                  <button class="close-button xml-copy-btn">&times; Close</button>
+              </div>
+          </div>
+          <div class="xml-content" id="metadata-code-block">Loading...</div>
+      </div>
+  </div>
 
 </body>
 </html>

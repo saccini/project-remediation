@@ -853,45 +853,13 @@ footer p {
         max-width: 100%; /* Image takes up the full width on phones */
     }
 }
-/* --- UPDATED: Modal/Popover Container --- */
+/* The floating wrapper for the XML popup */
 .modal-content {
-    background-color: #000000; /* Pure black background */
-    padding: 5px 15px 15px 15px;
-    border: 1px solid #39ff14; /* Neon green border */
-    width: 600px; /* Increased from 450px to make it significantly wider */
-    border-radius: 8px;
-    /* Added a subtle neon green glow to the drop shadow */
-    box-shadow: 0 10px 25px rgba(57, 255, 20, 0.15); 
-    margin: 0; 
+    width: 600px; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); /* Nice heavy drop shadow */
+    margin: 0;
+    /* Background colors, fonts, and borders are now automatically inherited from .xml-box! */
 }
-
-.modal-content h3 {
-    color: #39ff14; /* Neon green text for the header */
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #333; /* Optional: adds a subtle line under the header */
-    padding-bottom: 10px;
-}
-
-/* --- UPDATED: The Code Block Window --- */
-#metadata-modal pre {
-    background-color: #000000; /* Pure black to blend with the container */
-    color: #39ff14; /* Neon green text */
-    padding: 10px;
-    overflow-x: auto; /* Forces horizontal scrollbar if lines are too long */
-    overflow-y: auto; /* Forces vertical scrollbar if the file is too tall */
-    max-height: 500px; /* This is the magic property that enables vertical scrolling */
-    font-family: 'Space Mono', monospace;
-    font-size: 14px;
-    border: none; /* Removed the inner border to keep the terminal look clean */
-}
-
-/* Make the close button neon green on hover too */
-.close-button:hover,
-.close-button:focus {
-    color: #39ff14;
-    text-decoration: none;
-}/* Creates the side-by-side layout */
 .workspace-layout {
     display: flex;
     align-items: flex-start;
@@ -904,4 +872,53 @@ footer p {
     display: none; 
     position: absolute; 
     z-index: 1000; 
+}
+/* --- NEW: 3-Column Image Gallery --- */
+.iteration-gallery {
+    display: grid;
+    /* This creates 3 equal-width columns */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Space between the images */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.gallery-item .caption {
+    text-align: center; /* Centers the caption under each image */
+    font-size: 0.85em;
+    margin-top: 8px;
+}
+
+/* Make it responsive for mobile devices */
+@media (max-width: 768px) {
+    .iteration-gallery {
+        /* On small screens, stack the images 1 on top of the other */
+        grid-template-columns: 1fr; 
+    }
+}
+/* Modifier for 2-column galleries */
+.iteration-gallery.two-col {
+    grid-template-columns: repeat(2, 1fr);
+}
+/* Make all metadata images interactive with a hover fade */
+.metadata-image {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.metadata-image:hover {
+    opacity: 0.88;
+}
+/* Clever asymmetric grid for mixed aspect ratios */
+.iteration-gallery.mixed-col {
+    /* The right column gets 1.8x more space than the left */
+    grid-template-columns: 1fr 1.77fr; 
+    align-items: center; /* Vertically centers them if heights are slightly off */
 }
