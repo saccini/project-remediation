@@ -1,31 +1,31 @@
 
   const images = [
     {
-      src:      'assets/images/lb17919007_5_0288.jpeg',
+      src:      'assets/images/P1stoldwMetadata.jpeg',
       alt:      'Page 252 of Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, , §§ 1–3',
       caption:  'Fig. 1 \u2014 Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 252, digitised [2026-05-01]',
-      download: 'assets/images/lb17919007_5_0288.jpeg',
+      download: 'assets/images/P1stoldwMetadata.jpeg',
       transcription: 'assets/transcriptions/lb17919007_5_0288.txt',
     },
     {
-      src:      'assets/images/lb17919007_5_0289.jpeg',
+      src:      'assets/images/P2stoldwMetadata .jpeg',
       alt:      'Page 253 of Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, §§ 4–8',
       caption:  'Fig. 2 \u2014 Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 253, digitised [2026-05-01]',
-      download: 'assets/images/lb17919007_5_0289.jpeg',
+      download: 'assets/images/P2stoldwMetadata.jpeg',
       transcription: 'assets/transcriptions/lb17919007_5_0289.txt',
     },
     {
-      src:      'assets/images/lb17919007_5_0290.jpeg',
+      src:      'assets/images/P3stoldwMetadataedit.jpeg',
       alt:      'Page 254 of Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, §§ 9–14',
       caption:  'Fig. 3 \u2014 Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 254, digitised [2026-05-01]',
-      download: 'assets/images/lb17919007_5_0290.jpeg',
+      download: 'assets/images/P3stoldwMetadataedit.jpeg',
       transcription: 'assets/transcriptions/lb17919007_5_0290.txt',
     },
     {
-      src:      'assets/images/lb17919007_5_0291.jpeg',
+      src:      'assets/images/P4soldwMetadataedit.jpeg',
       alt:      'Page 255 of Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, §§ 15–16',
       caption:  'Fig. 4 \u2014 Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 255, digitised [2026-05-01]',
-      download: 'assets/images/lb17919007_5_0291.jpeg',
+      download: 'assets/images/P4soldwMetadataedit.jpeg',
       transcription: 'assets/transcriptions/lb17919007_5_0291.txt',
     },
   ];
@@ -132,28 +132,28 @@ const allParagraphs = [
 
 const allZones = [
   /* img1 */ [
-    { top:'50%',  left:'13%', width:'80%', height:'4%', label:'§ 1' },
-    { top:'54%', left:'13%', width:'80%', height:'4%', label:'§ 2'  },
-    { top:'58%', left:'13%', width:'80%', height:'18%', label:'§ 3' },
+    { top:'46%',  left:'11%', width:'80%', height:'4%', label:'§ 1' },
+    { top:'50%', left:'11%', width:'80%', height:'4%', label:'§ 2'  },
+    { top:'54%', left:'11%', width:'80%', height:'18%', label:'§ 3' },
   ],
   /* img2*/ [
-    { top:'8%',  left:'10%', width:'52%', height:'4%', label:'§ 4' },
-    { top:'12%', left:'10%', width:'52%', height:'16%', label:'§ 5' },
-    { top:'28%', left:'10%', width:'52%', height:'23%', label:'§ 6' },
-    { top:'51%', left:'10%', width:'52%', height:'10%', label:'§ 7' },
-    { top:'61%', left:'10%', width:'52%', height:'11%', label:'§ 8' },
+    { top:'5%',  left:'12%', width:'52%', height:'4%', label:'§ 4' },
+    { top:'9%', left:'12%', width:'52%', height:'16%', label:'§ 5' },
+    { top:'25%', left:'12%', width:'52%', height:'23%', label:'§ 6' },
+    { top:'48%', left:'12%', width:'52%', height:'10%', label:'§ 7' },
+    { top:'58%', left:'12%', width:'52%', height:'11%', label:'§ 8' },
   ],
   /* img3*/ [
-    { top:'7%',  left:'38%', width:'58%', height:'5%',  label:'§ 9' },
-    { top:'12%', left:'38%', width:'58%', height:'5%', label:'§ 10'},
-    { top:'18%', left:'38%', width:'58%', height:'20%', label:'§ 11'},
-    { top:'38%', left:'38%', width:'58%', height:'16%', label:'§ 12'},
-    { top:'54%', left:'38%', width:'58%', height:'9.5%',  label:'§ 13'},
-    { top:'63.5%', left:'38%', width:'58%', height:'9%',  label:'§ 14'},
+    { top:'3%',  left:'36%', width:'58%', height:'5%',  label:'§ 9' },
+    { top:'8%', left:'36%', width:'58%', height:'5%', label:'§ 10'},
+    { top:'14%', left:'35%', width:'58%', height:'21%', label:'§ 11'},
+    { top:'35%', left:'35%', width:'58%', height:'16%', label:'§ 12'},
+    { top:'51%', left:'34%', width:'58%', height:'9.5%',  label:'§ 13'},
+    { top:'60%', left:'34%', width:'58%', height:'10%',  label:'§ 14'},
   ],
   /* img4*/ [
-    { top:'7%',  left:'10%', width:'60%', height:'5%', label:'§ 15'},
-    { top:'12%', left:'10%', width:'60%', height:'9%', label:'§ 16'},
+    { top:'3%',  left:'10%', width:'60%', height:'5%', label:'§ 15'},
+    { top:'9%', left:'10%', width:'60%', height:'9.5%', label:'§ 16'},
   ],
 ];
 
