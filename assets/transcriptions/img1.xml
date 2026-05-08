@@ -69,11 +69,6 @@
     </profileDesc>
 
     <encodingDesc>
-        <refsDecl xml:id="paragraphRule">
-            <p>
-                § symbols denotes a legal paragraph.  
-            </p>
-        </refsDecl>
         <tagsDecl>
             <rendition xml:id="dropCap">
                 Starting capital letter of first paragraph. Spans 2 lines. 
@@ -97,7 +92,6 @@
         <div type="chapter"> 
             <head type="heading1">XL. Cap.</head>
             <head type="heading2">Om stöld.</head>
-            <div type="paragraph" decls="#paragraphRule">
                 <p>
                     <lb/> 1. §.
                 </p>
@@ -109,7 +103,6 @@
                     <lb break="no"/>dens wårde.
                 </p>
                 <fw type="catchword" place="bottom-right">2. §.</fw>
-            </div>
         </div>
     </body>
   </text>

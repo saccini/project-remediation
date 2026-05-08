@@ -69,11 +69,6 @@
     </profileDesc>
 
     <encodingDesc>
-        <refsDecl xml:id="paragraphRule">
-            <p>
-                § symbols denotes a legal paragraph.
-            </p>
-        </refsDecl>
         <tagsDecl>
             <rendition xml:id="dropCap">
                 Starting capital letter of first paragraph. Spans 2 lines. 
@@ -95,13 +90,10 @@
         <fw type="header" place="top-center">Mißgiernings Balk.</fw>
         <milestone unit="line" rend="horizontal-rule"/>
         <div type="chapter"> 
-            <div type="paragraph" decls="#paragraphRule" n="5">
                 <p>
                     <lb/>timmer och gärdsel; stånde tiufsrätt. Ar thet min-
                     <lb break="no"/>dre; tå bötes, som om snatteri sägs.
                 </p>
-            </div>
-            <div type="paragraph" decls="#paragraphRule" n="6">
                 <p rendition="#indentFirst">
                     <lb/>6. §. Hwar som bryter sig in i något rum, el-
                     <lb break="no"/>ler hus, til at stiäla, ändoch han alsintet finner el-
@@ -113,8 +105,6 @@
                     <lb/>par ris. Hafwer han ock tå något stulit; plichte
                     <lb/>therföre särskilt, som förr sagdt är.
                 </p>
-            </div>
-            <div type="paragraph" decls="#paragraphRule" n="7">
                 <p rendition="#indentFirst">
                     <lb/>7. §. Bryter tiuf sig in genom fenster, eller
                     <lb/>eljest i gård och hus om nattetid, och får sår, eller
@@ -124,23 +114,18 @@
                     <lb break="no"/>ja; ligge i tweböte, och plichte thertil för hemfrids
                     <lb/>brott.
                 </p>
-            </div>
-            <div type="paragraph" decls="#paragraphRule" n="8">
                 <p rendition="#indentFirst">
                     <lb/>8 §. Tager annar man tiufwen, än then,
                     <lb/>som rätter målsägande är, eller godset wårda bor-
                     <lb break="no"/>de; tå äger han tiugunde penningen af alt, thet
                     <lb/>tiufwen ther hade med sig, som hans egit war.
                 </p>
-            </div>
-            <div type="paragraph" decls="#paragraphRule" n="9">
                 <p rendition="#indentFirst">
                     <lb/>9. §. Wil ei målsäganden sielf anklaga tiuf-
                     <lb break="no"/>wen for Rätta; käre tå then, som å Konungens
                     <lb/>wägnar kära äger, och niute mälsägande rätt.
                 </p>
                 <fw type="catchword" place="bottom-right">10. §.</fw>
-            </div>
         </div>
     </body>
   </text>
