@@ -926,3 +926,49 @@ footer p {
     grid-template-columns: 1fr 1.77fr; 
     align-items: center; /* Vertically centers them if heights are slightly off */
 }
+/* --- The Stacked Book Showcase (50% Smaller) --- */
+.book-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    
+    /* NEW: Shrink the grid to 50% and center it */
+    width: 50%; 
+    margin-top: 30px;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+/* Tells the wide images to stretch across BOTH columns */
+.book-showcase-grid .showcase-wide {
+    grid-column: span 2; 
+}
+
+.book-showcase-grid img {
+    width: 100%; /* Keeps the image fitting its new, smaller column perfectly */
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+/* Center the captions to match the centered gallery */
+.book-showcase-grid .caption {
+    text-align: center;
+}
+
+/* Mobile Responsiveness: Make it bigger on small screens so it's still readable */
+@media (max-width: 768px) {
+    .book-showcase-grid {
+        width: 80%; /* Gives it a bit more room on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .book-showcase-grid {
+        width: 100%; /* Goes back to full width on tiny phone screens */
+        grid-template-columns: 1fr; /* Stacks vertically */
+    }
+    .book-showcase-grid .showcase-wide {
+        grid-column: span 1; 
+    }
+}
