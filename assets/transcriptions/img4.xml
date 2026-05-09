@@ -17,7 +17,7 @@
         </titleStmt>
 
         <publicationStmt> <!-- Information about distribution of the resource -->
-            <publisher>Sachini Nissanka</publisher>
+            <publisher>Sachini Nissanka and Erik Lundahl</publisher>
             <date>2026</date>
             <availability>
                 <p>
@@ -74,12 +74,6 @@
     </profileDesc>
 
     <encodingDesc>
-        <!-- (references declaration)  -->
-        <refsDecl xml:id="paragraphRule">
-            <p>
-                § symbols denotes a legal paragraph.
-            </p>
-        </refsDecl>
         <!-- provides detailed information about the tagging applied to a document. -->
         <tagsDecl>
             <rendition xml:id="dropCap" scheme="css">
@@ -102,14 +96,12 @@
         <fw type="pageNum" place="top-right">255</fw>
         <milestone unit="line" rend="horizontal-rule"/>
         <div type="chapter"> 
-            <div type="paragraph" decls="#paragraphRule" n="10">
                 <p rendition="#indentFirst">
                     <lb/>10. §. Hwilken med wilja släpper tiuf, och
                     <lb/>honom utur wägen skaffar, sedan han gripen och
                     <lb/>fängslad är; plichte som i Straff Balken, och förr
                     <lb/>i thenna Balk urskils.
                 </p>
-            </div>
         </div>
         <gap reason="sampling" quantity="20" unit="lines">
             <desc>Next chapter contents</desc>
