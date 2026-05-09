@@ -7,7 +7,7 @@
   <teiHeader>
     <fileDesc>
         <titleStmt>
-            <title> <!-- title of the resource -->
+            <title>
                 img2
             </title>
             <respStmt>
@@ -15,18 +15,17 @@
                 <name>Sachini Nissanka</name>
             </respStmt>
         </titleStmt>
-
-        <publicationStmt> <!-- Information about distribution of the resource -->
+        <publicationStmt> 
             <publisher>Sachini Nissanka and Erik Lundahl</publisher>
             <date>2026</date>
             <availability>
+                <licence target="https://creativecommons.org/licenses/by/4.0/"></licence>
                 <p>
                     This is an open access work licensed under a Creative Commons Attribution 4.0 International license.
                 </p>
             </availability>
         </publicationStmt>
-
-        <sourceDesc> <!-- Information about source from which the resource derives -->
+        <sourceDesc>
             <msDesc>
                 <msIdentifier>
                     <country>Sweden</country>
@@ -44,14 +43,12 @@
                         <textLang mainLang="sv">Swedish</textLang>
                     </msItem>       
                 </msContents>
-
                 <physDesc>
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>paper</support>
                         </supportDesc>
                     </objectDesc>
-
                     <typeDesc>
                         <typeNote>
                             Printed in Fraktur typeface.
@@ -61,13 +58,11 @@
             </msDesc>
         </sourceDesc>
     </fileDesc>
-
     <profileDesc>
         <langUsage>
             <language ident="sv">Swedish as used in 18th century.</language>
         </langUsage>
     </profileDesc>
-
     <encodingDesc>
         <tagsDecl>
             <rendition xml:id="dropCap">
@@ -82,22 +77,22 @@
         </tagsDecl>
     </encodingDesc>
   </teiHeader>
-
   <text xml:lang="sv" rendition="font">
     <body>
         <pb n="253"/>
         <fw type="header" place="top-center">Mißgiernings Balk.</fw>
+        <p><add rend="ink" resp="unknown-annotator">Cap. 40.</add></p>
         <fw type="pageNum" place="top-right">253</fw>
         <milestone unit="line" rend="horizontal-rule"/>
         <div type="chapter"> 
                 <p rendition="#indentFirst">
-                    <lb/> 2. §. Stiäl någor å flera ställen, än ett, eller 
-                    <lb/> på åtskilliga tider, och hafwer ei förr warit för tiuf
-                    <lb break="no"/>ad lagförd och straffad; tå skal om hwarje tiufnad
+                    <lb/> 2. §. Stiäl någor å flera ställen, än ett, eller
+                    <lb/> på åtskilliga tider, och hafwer ej förr warit för tiuf
+                    <lb break="no"/>nad lagförd och straffad; tå skal om hwarje tiufnad
                     <lb/>särskilt å sin ort ransakas, och ther pröfwas, om
                     <lb/>han til tiufnaden saker är; gånge sedan Dom öfwer
                     <lb/>tiufwen för altsamman, ther han sidst lagföres, och
-                    <lb/>plichtte, som then ther första gången stulit.
+                    <lb/>plichte, som then ther första gången stulit.
                 </p>
                 <p rendition="#indentFirst">
                     <lb/>3. §. Warder tiuf för stöld andra gången lag
@@ -123,7 +118,7 @@
                     <lb/>ällion eller nötter til full mans bördo, el
                     <lb break="no"/>er laß; eller stiäl och förer bort ett laß af annars huggen wed,
                 </p>
-                <fw type="signatureMark" place="bottom-center">Ii 3</fw> <!-- https://www.folger.edu/blogs/collation/deciphering-signature-marks/ -->
+                <fw type="signatureMark" place="bottom-center">Ii 3</fw> 
                 <fw type="catchword" place="bottom-right">tim</fw>
         </div>
     </body>

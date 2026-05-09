@@ -66,18 +66,22 @@
 
       <div class="bodytext">
         <h2>How we handled the text</h2>
-        <p></p>
+        <p>The original text was written in old Swedish and "Fraktur" (2026) (this is a closest assumption we arrived, after analysing fonts of the book) typeface. This presented a challenge since the language and script are foreign to myself (Sachini) and only partial comprehension to other member (Erik) despite being native comprehension of modern Swedish. Therefore, we used AI and <a href="https://www.transkribus.org/old-german-scripts">Transcribus</a> (READ-COOP SCE, 2026) tool to get the closest initial transcriptions. We did not rely on the accuracy of these transcriptions alone and each transcription was then manually cross-examined with the original digitised images. 
+        </p>
+        <p>
+          After correcting and finalising the transcriptions, we used course materials and TEI guidelines to encode them into xml. The tags we used are listed on the table here. --> 
+        </p>
 
-        <p></p>
-
-        <p></p>
-
-        <p></p>
+        <p>Please note that we are focusing exclusively on Chapter 40, which begins on the bottom half of page 252 and ends at the top of page 255. As a result, image text that falls outside of this chapter has been omitted from the transcription.</p>
 
         <h2>What is gained and lost</h2>
-        <p></p>
+        <p>
+          After remediating the digitised images into TEI-XML, they now have gained searchability, machine-readability and interoperability with other heritage systems. These transcriptions now can used to perform computational analysis (Dillen, 2026).
+        </p>
 
-        <p></p>
+        <p>
+          TEI-XML files lost the visual appearance of their corresponding digitised images. The unique Fraktur typeface conveys the historical significance. This "aura" is irretrievably lost in the tei-xml files (Bolter & Grusin, 1999).
+        </p>
       </div>
 
       <div>
@@ -96,7 +100,7 @@
           <tr><td>&lt;gap&gt;</td><td>Indicates a point where material has been omitted in the transcription.</td></tr>
           <tr><td>&lt;hi&gt;</td><td>Indicates a dropcap letter.</td></tr>
           <tr><td>&lt;lb/&gt;</td><td>Marks the beginning of a line.</td></tr>
-          <tr><td>&lt;fw&gt;</td><td>Indicates a catchword/ header or page number.</td></tr>
+          <tr><td>&lt;fw&gt;</td><td>Indicates a catchword/ header or page number (Werner, 2012).</td></tr>
           <tr><td>&lt;milestone&gt;</td><td>Indicates  horizontal line.</td></tr>
         </table>
       </div>

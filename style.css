@@ -127,6 +127,10 @@ main {
   text-align: justify;
 }
 
+.bodytextref p{
+  text-align: left;
+}
+
 .bodytext p:last-child { margin-bottom: 0; }
 
 .bodytext ol {
