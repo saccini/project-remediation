@@ -7,7 +7,7 @@
   <teiHeader>
     <fileDesc>
         <titleStmt>
-            <title> <!-- title of the resource -->
+            <title> 
                 img4
             </title>
             <respStmt>
@@ -15,29 +15,25 @@
                 <name>Sachini Nissanka</name>
             </respStmt>
         </titleStmt>
-
-        <publicationStmt> <!-- Information about distribution of the resource -->
+        <publicationStmt> 
             <publisher>Sachini Nissanka and Erik Lundahl</publisher>
             <date>2026</date>
             <availability>
+                <licence target="https://creativecommons.org/licenses/by/4.0/"></licence>
                 <p>
                     This is an open access work licensed under a Creative Commons Attribution 4.0 International license.
                 </p>
             </availability>
         </publicationStmt>
-
-        <sourceDesc> <!-- Information about source from which the resource derives -->
-            <msDesc>  <!--  description of a single identifiable manuscript or other text-bearing object such as an early printed book. -->
-
-                <msIdentifier> <!-- information required to identify the early printed book -->
+        <sourceDesc> 
+            <msDesc> 
+                <msIdentifier> 
                     <country>Sweden</country>
                     <settlement>Lund</settlement>
                     <repository>Private collection</repository>
                 </msIdentifier>
-
                 <msContents>
                     <msItem>
-                        <!-- (bibliographic citation) -->
                         <bibl>
                             <title>Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734</title>
                             <date>1736</date>
@@ -47,15 +43,12 @@
                         <textLang mainLang="sv">Swedish</textLang>
                     </msItem>       
                 </msContents>
-
                 <physDesc>
-                    <!-- description of the physical components making up the object which is being described -->
                     <objectDesc form="codex"> 
                         <supportDesc material="paper">
                             <support>paper</support>
                         </supportDesc>
                     </objectDesc>
-                    <!-- description of the typefaces -->
                     <typeDesc>
                         <typeNote>
                             Printed in Fraktur typeface.
@@ -65,16 +58,12 @@
             </msDesc>
         </sourceDesc>
     </fileDesc>
-
-    <!-- a detailed description of non-bibliographic aspects of a text, specifically the languages -->
     <profileDesc>
         <langUsage>
             <language ident="sv">Swedish as used in 18th century.</language>
         </langUsage>
     </profileDesc>
-
     <encodingDesc>
-        <!-- provides detailed information about the tagging applied to a document. -->
         <tagsDecl>
             <rendition xml:id="dropCap" scheme="css">
                 Starting capital letter of first paragraph. Spans 2 lines. 
@@ -88,11 +77,11 @@
         </tagsDecl> 
     </encodingDesc>
   </teiHeader>
-
   <text xml:lang="sv" rendition="font">
     <body>
         <pb n="255"/>
         <fw type="header" place="top-center">Mißgiernings Balk.</fw>
+        <p><add rend="ink" resp="unknown-annotator">Cap. 40.</add></p>
         <fw type="pageNum" place="top-right">255</fw>
         <milestone unit="line" rend="horizontal-rule"/>
         <div type="chapter"> 

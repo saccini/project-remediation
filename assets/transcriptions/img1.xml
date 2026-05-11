@@ -7,26 +7,25 @@
   <teiHeader>
     <fileDesc>
         <titleStmt>
-            <title> <!-- title of the resource -->
-                img1 <!-- file name of the image - we should find a better naming convension-->
+            <title> 
+                img1 
             </title>
             <respStmt>
                 <resp>Transcribed by</resp>
                 <name>Sachini Nissanka</name>
             </respStmt>
         </titleStmt>
-
-        <publicationStmt> <!-- Information about distribution of the resource -->
+        <publicationStmt>
             <publisher>Sachini Nissanka and Erik Lundahl</publisher>
             <date>2026</date>
             <availability>
+                <licence target="https://creativecommons.org/licenses/by/4.0/"></licence>
                 <p>
                     This is an open access work licensed under a Creative Commons Attribution 4.0 International license.
                 </p>
             </availability>
         </publicationStmt>
-
-        <sourceDesc> <!-- Information about source from which the resource derives -->
+        <sourceDesc> 
             <msDesc>
                 <msIdentifier>
                     <country>Sweden</country>
@@ -44,7 +43,6 @@
                         <textLang mainLang="sv">Swedish</textLang>
                     </msItem>       
                 </msContents>
-
                 <physDesc>
                     <objectDesc form="codex">
                         <supportDesc material="paper">
@@ -61,13 +59,11 @@
             </msDesc>
         </sourceDesc>
     </fileDesc>
-
     <profileDesc>
         <langUsage>
             <language ident="sv">Swedish as used in 18th century.</language>
         </langUsage>
     </profileDesc>
-
     <encodingDesc>
         <tagsDecl>
             <rendition xml:id="dropCap">
@@ -82,10 +78,8 @@
         </tagsDecl>
     </encodingDesc>
   </teiHeader>
-<!-- https://www.transkribus.org/old-german-scripts -->
   <text xml:lang="sv" rendition="font">
     <body>
-        <!-- (gap) indicates a point where material has been omitted in a transcription -->
         <gap reason="sampling" quantity="17" unit="lines">
             <desc>Previous chapter contents</desc>
         </gap>
@@ -98,8 +92,8 @@
                 <p>
                     <hi rendition="#dropCap">H</hi>war som första gången stiäl gods, eller pennin-
                     <lb break="no"/>gar, öfwer tijo daler; böte tre gånger så myc-
-                    <lb break="no"/>ket, som thet stulne wårdt är. Orkar han ei böta;
-                    <lb/>plichtte med kroppen, dock ei högre, än efter stö-
+                    <lb break="no"/>ket, som thet stulne wårdt är. Orkar han ej böta;
+                    <lb/>plichtte med kroppen, doch ej högre, än efter stö-
                     <lb break="no"/>dens wårde.
                 </p>
                 <fw type="catchword" place="bottom-right">2. §.</fw>
