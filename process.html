@@ -140,7 +140,9 @@
       <span class="topic">Materials &amp; Equipment</span>
       <div class="bodytext">
         <p>Before beginning the iterations, we gathered the following equipment for the archival process.</p>
-        <p>Note that some materials were added between iterations — items added after a particular iteration are noted accordingly.</p>
+        <p>Note that some materials were added between iterations. These items are the subsequent items after [nbr of the iteration] onwards until
+            the next iteration.
+        </p>
       </div>
 
       <table class="meta-table">
@@ -164,7 +166,7 @@
       <div class="workspace-layout">
         <div class="workspace-image">
           <img
-            src="assets/images/Work_areawmetadata.jpeg"
+            src="assets/images/Work_areawmetadata.webp"
             alt="Our night-time digitisation workspace"
             class="metadata-image"
             data-xml-src="assets/images/metadataWork_area.xml"
@@ -211,7 +213,7 @@
 
             <div class="iteration-gallery">
                 <div class="gallery-item">
-                    <img src="assets/images/It1_gloveswithmetadata.jpeg" 
+                    <img src="assets/images/It1_gloveswithmetadata.webp" 
                          alt="Putting on cotton gloves" 
                          class="metadata-image"
                          data-xml-src="assets/images/It1_glovesmetadata.xml"
@@ -219,7 +221,7 @@
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/images/It1_adjustlight.jpeg" 
+                    <img src="assets/images/It1_adjustlight.webp" 
                          alt="Adjusting the lights" 
                          class="metadata-image"
                          data-xml-src="assets/images/It1_adjustlightpmetadata.xml"
@@ -227,7 +229,7 @@
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/images/It1_readdoc.jpeg" 
+                    <img src="assets/images/It1_readdoc.webp" 
                          alt="Reading the document" 
                          class="metadata-image"
                          data-xml-src="assets/images/It1_readdocmetadata.xml"
@@ -252,12 +254,20 @@
                 </ul>
             </p>
             <p>
-                [Describe the second attempt based on what you learned from the first. E.g., Moving the lights, changing camera settings, or adjusting the artefact's position.]
+                Moving from the cupboard to the top of the dresser freed up the vertical space and made 
+                positioning the camera significantly easier. As Andrea Davis Kronlund (2021b) describes in her lecture, a neutral gray background 
+                is usually recommended as it tends not to influence exposure and preceived contrast. Since we were limited both with our camera and lighting setup
+                we opted for a neutral gray background to give our smartphone sensors the best possible chance of capturing the physical characteristics of the document
+                 without introducing unwanted color shifts or glare. Unfortunatley there were no netural gray A2 papers at Panduro so we had to problem solve and find the next 
+                 best thing. Luckily we found a mouse mat at Clas Ohlson that had the right color and dimensions needed. 
+                 As for limiting the glare the setup worked good for the pages but as shown in the picture on the right hand side, the leather
+                 cover of the artefact was quite reflective and so we had to figure out a way to disperse the light onto the artefact without causing unwanted 
+                 shadows either from the smartphone or the person taking the picture.
             </p>
 
             <div class="iteration-gallery mixed-col">
                 <div class="gallery-item">
-                    <img src="assets/images/It2_nogowmetadata.jpeg" 
+                    <img src="assets/images/It2_nogowmetadata.webp" 
                          alt="Highlighting the move to the new area" 
                          class="metadata-image"
                          data-xml-src="assets/images/It2_nogometadata.xml"
@@ -265,7 +275,7 @@
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/images/It2_displaywmetadata.jpeg" 
+                    <img src="assets/images/It2_displaywmetadata.webp" 
                          alt="Overview of the 2nd iteration workspace" 
                          class="metadata-image"
                          data-xml-src="assets/images/It2_displaymetadata.xml"
@@ -281,15 +291,30 @@
       <span class="topic">Iteration 3</span>
       
       <div class="workspace-layout">
+          
           <div class="workspace-image">
-              <img src="assets/images/It3_finalsetupwmetadata.jpeg" 
+              <img src="assets/images/It3_finalsetupwmetadata.webp" 
                    alt="Final setup of the digitisation process" 
                    class="metadata-image"
                    data-xml-src="assets/images/It3_finalsetupmetadata.xml"
                    title="Click to view GIMP metadata">
-              <p class="caption"><em>Click image for XML metadata</em></p>
-          </div>
+              <p class="caption" style="margin-bottom: 2.5rem;"><em>Click image for XML metadata</em></p>
 
+              <span class="topic" style="font-size: 0.65rem; margin-bottom: 0.5rem;">Post-Processing Example</span>
+              <div class="image-compare-container">
+                  <img src="assets/images/P1stoldUnprocessed.webp" alt="Unedited raw photo" class="compare-base">
+                  
+                  <img src="assets/images/P1stoldwMetadataedit.webp" alt="Post-processed photo" class="compare-overlay" id="compare-overlay">
+                  
+                  <div class="compare-line" id="compare-line">
+                      <div class="compare-handle">&#8596;</div>
+                  </div>
+                  
+                  <input type="range" min="0" max="100" value="50" class="compare-slider" id="compare-slider">
+              </div>
+              <p class="caption"><em>Drag the slider to compare edited vs. raw.</em></p>
+          </div>
+          
           <div class="workspace-text">
               <h2>The Final Setup &amp; Post-processing</h2>
               <p>
@@ -301,17 +326,71 @@
                 </ul>
             </p>
               <p>
-                [Describe the successful, final setup — final lighting angles, distance from
-                camera to object, and the pre/post-processing adjustments made in GIMP.]
-              </p>
+                Once we had purchased the paper reflectors, it was time for the final setup, which you can see in the 
+                picture on the left. In the end, we actually couldn't use the taped-up papers since they were too 
+                difficult to adjust. Instead, I sat on the chair with a spirit level balanced on the phone, using the tape on 
+                the wall as a distance gauge. 
+                </p>
+                <p>
+                Meanwhile, my girlfriend adjusted the paper arcs from behind my back in order to disperse the lighting 
+                as evenly as we could and minimize shadows and glare. Because of this manual approach, there are some 
+                inconsistencies with both the lighting and the images, but we tried to minimize these through 
+                post-processing.
+                </p>
+              <p><b>Post-processing</b></p>
+                    <p>
+                    The post-processing of the pictures was done in GIMP. The images were captured in JPEG format as opposed to 
+                    RAW because we didn't have physical tools to color correct, such as a Spectrometer, Colorchecker, or gray 
+                    card (Davis Kronlund, 2021b). Because the built-in color correction of the smartphones was deemed 
+                    sufficient for this small-scale project, we did not have to manually color correct the images in GIMP. 
+                    </p>
+                    <p>
+                    We did, however, crop the images to only show relevant content and remove excess background. 
+                    We also brightened or darkened certain areas of the images in order to heighten the viewing experience. 
+                    This was done by creating a transparent layer with "Soft Light" mode enabled on top of the image. We then 
+                    used the airbrush tool (with a hardness of 25 and the .2 Block 01 brush in various sizes), setting the 
+                    foreground color to black to darken glare, or white to increase contrast and improve visibility.
+                    </p>
+                    <p>
+                    Additionally, we added metadata to the images using GIMP's built-in "edit metadata" feature, adding descriptions, 
+                    geodata, and technical information such as camera settings and device age. All of the metadata is encoded directly 
+                    into the image files. However, for the metadata we chose to display on the site, only the tags we actively edited 
+                    are shown to avoid displaying unused or redundant data.
+                    </p>
+                    <p>
+                    Finally, we scaled and exported the images as .webp. WebP is a highly compressed format used for the images displayed 
+                    on the website to increase performance and load speeds. For the images we deemed to have true archival value, such as 
+                    the actual pages and the cover of the book, we also exported unscaled versions in the archival standard file format, .tiff 
+                    (Davis Kronlund, 2021d).
+                    </p>
           </div>
       </div>
 
       <div class="bodytext" style="margin-top: 3rem;">
           <h2>Reflection</h2>
-          <p>
-              [Add your reflections on the entire digitisation process here. For example: what proved to be the most challenging aspect? How did your setup evolve from Iteration 1 to 3? What would you do differently if you had access to a professional archival studio?]
-          </p>
+            <p>
+            The lack of access to a professional studio forced us to think outside the box, which was a fun but 
+            sometimes frustrating experience. Looking back, a combination of three specific upgrades would have made 
+            the biggest overall improvement to our image capture process: a RAW-capable digital camera, a proper 
+            tripod, and dedicated studio lighting.
+            </p>
+            <p>
+            First, using a digital camera capable of shooting RAW images would have given us full control over the 
+            color correction, as described by Davis Kronlund (2021a; 2021d). Second, a proper camera or smartphone 
+            stand would have solved our framing inconsistencies. Since our original plan to use the cupboard ceiling 
+            as a mount failed, and our final setup didn't allow us to secure the phone to a fixed point, a dedicated 
+            tripod would have ensured perfect, identical framing across all pictures. 
+            </p>
+            <p>
+            Finally, having access to proper studio lights that disperse light evenly across the document would have 
+            heavily limited the need for post-processing, specifically regarding glare reduction and exposure 
+            adjustments. 
+            </p>
+            <p>
+            While having all three of these tools together would have streamlined the workflow and elevated the final 
+            quality immensely, we are still satisfied with our results. It goes to show that with a bit of archival 
+            theory and a DIY mindset, you can achieve effective digitisation outcomes.
+            </p>
       </div>
     </section>
 

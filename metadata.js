@@ -98,3 +98,19 @@ class MetadataModal {
 document.addEventListener("DOMContentLoaded", () => {
     new MetadataModal();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.getElementById('compare-slider');
+    const overlay = document.getElementById('compare-overlay');
+    const line = document.getElementById('compare-line');
+
+    if (slider && overlay && line) {
+        slider.addEventListener('input', (e) => {
+            const sliderValue = e.target.value;
+            // Adjust the clipping mask to reveal more/less of the image
+            overlay.style.clipPath = `polygon(0 0, ${sliderValue}% 0, ${sliderValue}% 100%, 0 100%)`;
+            // Move the white line and handle to match
+            line.style.left = `${sliderValue}%`;
+        });
+    }
+});

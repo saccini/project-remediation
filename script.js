@@ -1,31 +1,31 @@
 
   const images = [
     {
-      src:      'assets/images/P1stoldwMetadata.jpeg',
+      src:      'assets/images/P1stoldwMetadataedit.webp',
       alt:      'Page 252 of Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, , §§ 1–3',
       caption:  'Fig. 1 \u2014 Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 252, digitised [2026-05-01]',
-      download: 'assets/images/P1stoldwMetadata.jpeg',
+      download: 'assets/images/P1stoldwMetadataedit.tiff',
       transcription: 'assets/transcriptions/lb17919007_5_0288.txt',
     },
     {
-      src:      'assets/images/P2stoldwMetadata .jpeg',
+      src:      'assets/images/P2stoldwMetadataedit.webp',
       alt:      'Page 253 of Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, §§ 4–8',
       caption:  'Fig. 2 \u2014 Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 253, digitised [2026-05-01]',
-      download: 'assets/images/P2stoldwMetadata.jpeg',
+      download: 'assets/images/P2stoldwMetadataedit.tiff',
       transcription: 'assets/transcriptions/lb17919007_5_0289.txt',
     },
     {
-      src:      'assets/images/P3stoldwMetadataedit.jpeg',
+      src:      'assets/images/P3stoldwMetadataedit.webp',
       alt:      'Page 254 of Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, §§ 9–14',
       caption:  'Fig. 3 \u2014 Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 254, digitised [2026-05-01]',
-      download: 'assets/images/P3stoldwMetadataedit.jpeg',
+      download: 'assets/images/P3stoldwMetadataedit.tiff',
       transcription: 'assets/transcriptions/lb17919007_5_0290.txt',
     },
     {
-      src:      'assets/images/P4soldwMetadataedit.jpeg',
+      src:      'assets/images/P4soldwMetadataedit.webp',
       alt:      'Page 255 of Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, §§ 15–16',
       caption:  'Fig. 4 \u2014 Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 255, digitised [2026-05-01]',
-      download: 'assets/images/P4soldwMetadataedit.jpeg',
+      download: 'assets/images/P4soldwMetadataedit.tiff',
       transcription: 'assets/transcriptions/lb17919007_5_0291.txt',
     },
   ];
