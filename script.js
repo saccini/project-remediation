@@ -4,14 +4,14 @@
       src:      'assets/images/P1stoldwMetadataedit.webp',
       alt:      'Page 252 of Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, , §§ 1–3',
       caption:  'Fig. 1 \u2014 Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 252, digitised [2026-05-01]',
-      download: 'assets/images/P1stoldwMetadataedit.tiff',
+      download: 'assets/images/P1stoldwMetadataedit.webp',
       transcription: 'assets/transcriptions/lb17919007_5_0288.txt',
     },
     {
       src:      'assets/images/P2stoldwMetadataedit.webp',
       alt:      'Page 253 of Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, §§ 4–8',
       caption:  'Fig. 2 \u2014 Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 253, digitised [2026-05-01]',
-      download: 'assets/images/P2stoldwMetadataedit.tiff',
+      download: 'assets/images/P2stoldwMetadataedit.webp',
       transcription: 'assets/transcriptions/lb17919007_5_0289.txt',
     },
     {
@@ -183,7 +183,6 @@ function changeImage(dir) {
   img.alt = data.alt;
 
   document.getElementById('img-caption').textContent = data.caption;
-  document.getElementById('img-download').href       = data.download;
   document.getElementById('img-counter').textContent = (currentImg + 1) + ' / ' + images.length;
   document.getElementById('prev-btn').disabled       = currentImg === 0;
   document.getElementById('next-btn').disabled       = currentImg === images.length - 1;
@@ -301,9 +300,39 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeLightbox();
 });
 
-document.getElementById('img-counter').textContent = '1 / ' + images.length;
-renderZones(0);
-selectZone(0);
+/* ── GALLERY SETUP (ONLY RUNS ON ARTEFACT PAGE) ── */
+const imgCounter = document.getElementById('img-counter');
+const overlay = document.getElementById('zone-overlay');
 
+if (imgCounter && overlay) {
+    imgCounter.textContent = '1 / ' + images.length;
+    renderZones(0);
+    selectZone(0);
+}
 
+/* ── HELP MODAL LOGIC (RUNS ON ANY PAGE THAT HAS THE BUTTON) ── */
+document.addEventListener('DOMContentLoaded', () => {
+    const helpBtn = document.getElementById('help-btn');
+    const helpModal = document.getElementById('help-modal');
+    const closeHelpBtn = document.getElementById('close-help-btn');
+
+    if (helpBtn && helpModal && closeHelpBtn) {
+        // Open modal
+        helpBtn.addEventListener('click', () => {
+            helpModal.style.display = 'block';
+        });
+
+        // Close modal on X click
+        closeHelpBtn.addEventListener('click', () => {
+            helpModal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside of it
+        window.addEventListener('click', (event) => {
+            if (event.target === helpModal) {
+                helpModal.style.display = 'none';
+            }
+        });
+    }
+});
 

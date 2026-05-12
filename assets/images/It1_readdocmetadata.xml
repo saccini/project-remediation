@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <gimp-metadata>
-    <!-- Dublin Core (DC) Standard -->
     <xmp-tag>
         <tag-name>Xmp.dc.title</tag-name>
         <tag-mode>single</tag-mode>
@@ -14,12 +13,9 @@
     <xmp-tag>
         <tag-name>Xmp.dc.description</tag-name>
         <tag-mode>multi</tag-mode>
-        <tag-value>Erik reading the document (Sweriges rikes lag 1734).
-He is also manually adjusting the lamps as he is reading
-in order to get the most even lighting possible.</tag-value>
+        <tag-value>Erik reading the document (Sweriges rikes lag 1734). He is also manually adjusting the lamps as he 
+            is reading in order to get the most even lighting possible.</tag-value>
     </xmp-tag>
-
-    <!-- People and Location Data -->
     <xmp-tag>
         <tag-name>Xmp.iptcExt.PersonInImage</tag-name>
         <tag-mode>multi</tag-mode>
@@ -45,15 +41,12 @@ in order to get the most even lighting possible.</tag-value>
         <tag-mode>single</tag-mode>
         <tag-value>Europe</tag-value>
     </xmp-tag>
-
-    <!-- Camera & Technical Info -->
     <xmp-tag>
         <tag-name>Xmp.iptcExt.AddlModelInfo</tag-name>
         <tag-mode>multi</tag-mode>
-        <tag-value>Equipment: iPhone 11 pro, normal camera mode (wideview - 26mm f/1.8), no flash, 12MP, ISO 250, 0EV, 1/50s. Device age at capture: 6.5 years.</tag-value>
+        <tag-value>Equipment: iPhone 11 pro, normal camera mode (wideview - 26mm f/1.8), no flash, 12MP, ISO 250, 0EV, 
+            1/50s. Device age at capture: 6.5 years.</tag-value>
     </xmp-tag>
-
-    <!-- GPS EXIF Data -->
     <xmp-tag>
         <tag-name>Exif.GPSInfo.GPSLongitude</tag-name>
         <tag-mode>single</tag-mode>
