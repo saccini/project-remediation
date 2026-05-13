@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <gimp-metadata>
-    <!-- Dublin Core (DC) Standard: Core info about the artefact -->
     <xmp-tag>
         <tag-name>Xmp.dc.title</tag-name>
         <tag-mode>single</tag-mode>
@@ -14,46 +13,41 @@
     <xmp-tag>
         <tag-name>Xmp.dc.description</tag-name>
         <tag-mode>multi</tag-mode>
-        <tag-value>The work area we had to work with during this process.
-The currently lit area is the 1st iteration and the white bench on the 
-left hand side is where the 2nd and 3rd iteration took place.
-The space is beneath a lofted bed and all picture sessions were held after 
-sundown to ensure as little light pollution from external sources as possible.</tag-value>
+        <tag-value>The work area we had to work with during this process. The currently lit area is the 1st iteration and 
+            the white bench on the left hand side is where the 2nd and 3rd iteration took place. The space is beneath a 
+            lofted bed and all picture sessions were held after sundown to ensure as little light pollution from external 
+            sources as possible.</tag-value>
     </xmp-tag>
     <xmp-tag>
-        <tag-name>Xmp.photoshop.State</tag-name>
+        <tag-name>Xmp.iptcExt.PersonInImage</tag-name>
+        <tag-mode>multi</tag-mode>
+        <tag-value></tag-value>
+    </xmp-tag>
+    <xmp-tag>
+        <tag-name>Xmp.iptcExt.City</tag-name>
         <tag-mode>single</tag-mode>
         <tag-value>Stockholm</tag-value>
     </xmp-tag>
     <xmp-tag>
-        <tag-name>Xmp.photoshop.Country</tag-name>
+        <tag-name>Xmp.iptcExt.CountryName</tag-name>
         <tag-mode>single</tag-mode>
         <tag-value>Sweden</tag-value>
     </xmp-tag>
     <xmp-tag>
-        <tag-name>Xmp.iptc.CountryCode</tag-name>
+        <tag-name>Xmp.iptcExt.CountryCode</tag-name>
         <tag-mode>single</tag-mode>
         <tag-value>SE</tag-value>
     </xmp-tag>
     <xmp-tag>
-        <tag-name>Xmp.iptc.CiAdrCity</tag-name>
+        <tag-name>Xmp.iptcExt.WorldRegion</tag-name>
         <tag-mode>single</tag-mode>
-        <tag-value>Stockholm</tag-value>
+        <tag-value>Europe</tag-value>
     </xmp-tag>
     <xmp-tag>
         <tag-name>Xmp.iptcExt.AddlModelInfo</tag-name>
         <tag-mode>multi</tag-mode>
-        <tag-value>Equipment: iPhone 11 pro, normal camera mode (wideview - 26mm f/1.8), no flash, 12MP, ISO 250, 0EV, 1/50s. Device age at capture: 6.5 years (released Sep 20, 2019).</tag-value>
-    </xmp-tag>
-    <xmp-tag>
-        <tag-name>Xmp.iptcExt.MaxAvailWidth</tag-name>
-        <tag-mode>single</tag-mode>
-        <tag-value>3024</tag-value>
-    </xmp-tag>
-    <xmp-tag>
-        <tag-name>Xmp.iptcExt.MaxAvailHeight</tag-name>
-        <tag-mode>single</tag-mode>
-        <tag-value>4032</tag-value>
+        <tag-value>Equipment: iPhone 11 pro, normal camera mode (wideview - 26mm f/1.8), no flash, 12MP, ISO 250, 0EV, 
+            1/50s. Device age at capture: 6.5 years (released Sep 20, 2019).</tag-value>
     </xmp-tag>
     <xmp-tag>
         <tag-name>Exif.GPSInfo.GPSLongitude</tag-name>
@@ -69,10 +63,5 @@ sundown to ensure as little light pollution from external sources as possible.</
         <tag-name>Exif.GPSInfo.GPSAltitude</tag-name>
         <tag-mode>single</tag-mode>
         <tag-value>0.0</tag-value>
-    </xmp-tag>
-    <xmp-tag>
-        <tag-name>Xmp.iptc.CiUrlWork</tag-name>
-        <tag-mode>multi</tag-mode>
-        <tag-value>https://saccini.github.io/project-remediation/</tag-value>
     </xmp-tag>
 </gimp-metadata>

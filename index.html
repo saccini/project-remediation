@@ -6,24 +6,32 @@
   <title>Multimodality Remediation Project</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  
+  <script src="script.js" defer></script>
 </head>
 <body>
+    
     <nav>
         <a href="index.html" class="nav-logo">Remediation <span>Project</span></a>
         <ul class="nav-links">
-            <li><a href="index.html", class="active">Background</a></li>
-            <li><a href="process.html">Process</a></li>
+            <li><a href="index.html" class="active">Background</a></li>
             <li><a href="artefact.html">Artefact</a></li>
             <li><a href="teixml.html">TEI-XML</a></li>
-            <li><a href="references.html">references</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="metadata.html">Metadata</a></li>
+            <li><a href="references.html">References</a></li>
         </ul>
     </nav>
+
     <header class="page-header">
         <div class="page-header-inner">
             <h1>Digitising an old<br><em>Swedish law book</em></h1>
             <p>This artefact is an original copy of Sweden’s 1734 års lag (The Law of 1734), which officially came into effect on September 1, 1736. </p>
         </div>
+        
+        <button id="help-btn" class="help-btn">?</button>
     </header>
+
     <main>
         <div>
             <span class="topic">About the artefact</span>
@@ -53,7 +61,7 @@
                 </div>
                 <div style="display: flex; flex-direction: column; min-height: 100%;">
                     <img 
-                    src="assets/images/DocumentCoverwMetadata.jpeg" 
+                    src="assets/images/DocumentCoverwMetadata.webp" 
                     alt="Cover of Sweriges Rikes Lag 1734"
                     >
                     <p style="font-size:0.68rem; color:rgb(120,120,120); font-family:'Space Mono',monospace; margin-top:0.4rem;">
@@ -62,7 +70,46 @@
                 </div>
              </div>
         </div>
+        
+        <div>
+            <span class="topic">Past vs. Present</span>
+            <div class="about-grid">
+                <div class="bodytext">
+                    <h2>The Books as Artefacts</h2>
+                    <p>
+                        When placing the 1734 artefact next to a modern 2023 Swedish law book, several fascinating parallels emerge. Interestingly, neither book contains <em>all</em> the laws of Sweden. They are both curated collections (<em>författningssamlingar</em>) printed by private entities—a private printer in 1736, and Norstedts Juridik today—designed to serve as practical reference tools.
+                    </p>
+                    <p>
+                        The major difference lies in promulgation. Today, when the Riksdag passes a new law, it is instantly published online and becomes legally binding. In the 18th century, the physical printing and distribution of this exact book to courts and parishes across the country was the primary method of making the law known and enforceable.
+                    </p>
+                    
+                    <h2>The Evolution of Justice: "Stöld"</h2>
+                    <p>
+                        By examining the transcribed <em>"Stöld"</em> (Thievery) chapter in this digital edition, we can observe clear ideological shifts over the last 300 years. The core concept of financial restitution remains intact—today, just as in 1734, the thief is responsible for compensating the plaintiff for damages. 
+                    </p>
+                    <p>
+                        However, the punitive framework has transformed entirely. The 1734 law relied heavily on physical deterrence, legally prescribing severe bodily punishment such as whipping, birching, and even hanging for repeat offenders. Over the centuries, the Swedish legal system has completely moved away from these methods, abolishing corporal and capital punishment in favor of rehabilitation, fines, and imprisonment.
+                    </p>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; gap: 30px; min-height: 100%;">
+                    <div>
+                        <img src="assets/images/DocumentComparisonTopwMetadata.webp" alt="1734 Law book next to modern law book" style="width: 100%; border-radius: 2px; border: 1px solid rgb(220, 220, 220);">
+                        <p style="font-size:0.68rem; color:rgb(120,120,120); font-family:'Space Mono',monospace; margin-top:0.6rem; text-align: center;">
+                            Scale Comparison (Top)
+                        </p>
+                    </div>
+                    <div>
+                        <img src="assets/images/DocumentComparisonSidewMetadata.webp" alt="Thickness comparison of the books" style="width: 100%; border-radius: 2px; border: 1px solid rgb(220, 220, 220);">
+                        <p style="font-size:0.68rem; color:rgb(120,120,120); font-family:'Space Mono',monospace; margin-top:0.6rem; text-align: center;">
+                            Scale Comparison (Side)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <hr class="rule">
+        
         <div>
             <span class="topic">Purpose of remediation</span>
             <div class="bodytext">
@@ -70,15 +117,44 @@
                 <p>
                     This artefact has previously been digitised and made publicly available through <a href="https://litteraturbanken.se/författare/Anonym/titlar/SwerigesRikesLag1734/sida/252/faksimil">litteraturbanken</a>.
                     The aim of this project is to independently replicate that remediation process and critically reflect on the methodological choices involved.
-                    <ol>
-                        <li>
-                          
-                        </li>
-                    </ol>
                 </p>
+                    <p>
+                    Specifically, we remediated this text to achieve three primary goals:
+                </p>
+                <ol>
+                    <li style="margin-bottom: 1rem;">
+                        <strong>Methodological Reflection:</strong> By acting as "DIY archivists," we engaged directly with the physical and technical constraints of digitisation—such as lighting, framing, and hardware limitations. This allowed us to critically examine the gap between theoretical archival standards and practical execution.
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <strong>Multimodal Accessibility:</strong> A flat image of 18th-century Swedish is inaccessible to many. We remediated the artefact into an interactive, multimodal experience by adding bounding-box navigation, modern Swedish and English translations, and Text-to-Speech (TTS) functionality, significantly broadening the potential audience.
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <strong>Open Data & Standards Compliance:</strong> Rather than just displaying a picture, we embedded rigorous structural and descriptive metadata (Dublin Core, EXIF, IPTC) into the files. By hosting the raw, uncompressed archival <code>.tiff</code> files on Zenodo, we transformed a static web image into a verifiable, open-access dataset for future digital humanities research.
+                    </li>
+                </ol>
             </div>
         </div>
     </main>
+
+    <div id="help-modal" class="help-modal">
+        <div class="help-modal-content">
+            <div class="help-modal-header">
+                <span>WEBSITE GUIDE</span>
+                <button class="close-help-btn" id="close-help-btn">&times; Close</button>
+            </div>
+            <div class="help-modal-body bodytext">
+                <p><strong>Welcome to the Remediation Project!</strong></p>
+                <p>Here is a quick guide to navigating this digital edition:</p>
+                <ul>
+                    <li><strong>Background:</strong> Learn about the 1734 law book and our project goals.</li>
+                    <li><strong>Artefact:</strong> Interact with the digitised pages, view translations, and listen to the text-to-speech.</li>
+                    <li><strong>Process:</strong> Read about our DIY digitisation methodology and image capture iterations.</li>
+                    <li><strong>Metadata & TEI-XML:</strong> Explore the underlying structural data and archival standards.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>Multimodality: Narrative and Context in Different Media Formats · University of Borås · 2026</p>
         <p>Sachini Nissanka . Erik Lundahl</p>
