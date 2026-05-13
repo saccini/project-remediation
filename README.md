@@ -13,7 +13,7 @@ To fully understand this project, we highly suggest visiting our [GitHub Pages W
  
 To explore this project, you do not need to install any specific software. Instead, you have three ways to interact with our work:
 
-**1. The Website **
+**1. The Website**
 For the best reading and viewing experience, simply click the blue **View Website** badge at the top of this page. This will take you to our interactive site where you can explore the artefact, the TEI-XML transcriptions, and the embedded Dublin Core metadata in a user-friendly format.
 
 **2. The Zenodo Archive**
