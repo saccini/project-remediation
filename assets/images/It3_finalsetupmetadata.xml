@@ -63,4 +63,19 @@
         <tag-mode>single</tag-mode>
         <tag-value>0.0</tag-value>
     </xmp-tag>
+    <xmp-tag>
+        <tag-name>Xmp.dc.rights</tag-name>
+        <tag-mode>multi</tag-mode>
+        <tag-value>(c) 2026 Sachini Nissanka and Erik Lundahl, licensed under CC-BY 4.0</tag-value>
+    </xmp-tag>
+    <xmp-tag>
+        <tag-name>Xmp.xmpRights.WebStatement</tag-name>
+        <tag-mode>single</tag-mode>
+        <tag-value>https://creativecommons.org/licenses/by/4.0/</tag-value>
+    </xmp-tag>
+    <xmp-tag>
+        <tag-name>Xmp.xmpRights.Marked</tag-name>
+        <tag-mode>single</tag-mode>
+        <tag-value>True</tag-value>
+    </xmp-tag>
 </gimp-metadata>

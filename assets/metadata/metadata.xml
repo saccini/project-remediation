@@ -1,37 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:RDF 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:dcmitype="http://purl.org/dc/dcmitype/">
     
-    <dc:title>Sweriges rikes lag 1734 - Digital Remediation</dc:title>
-    
-    <dc:creator>Sachini Nissanka</dc:creator>
-    <dc:creator>Erik Lundahl</dc:creator>
-    
-    <dc:subject>Swedish legal history</dc:subject>
-    <dc:subject>Digitisation</dc:subject>
-    <dc:subject>Archival methodology</dc:subject>
-    <dc:subject>Multimodality</dc:subject>
-    
-    <dc:description>A digital remediation, transcription, and archival capture of the "Stöld" (Thievery) chapter from the 1734 Swedish legal code.</dc:description>
-    
-    <dc:publisher>University of Borås</dc:publisher>
-    
-    <dc:date>2026-05</dc:date>
-    
-    <dc:type>Collection</dc:type>
-    <dc:type>Image</dc:type>
-    <dc:type>Text</dc:type>
-    <dc:type>InteractiveResource</dc:type>
-    
-    <dc:format>image/webp</dc:format>
-    <dc:format>image/tiff</dc:format>
-    <dc:format>text/xml</dc:format>
-    <dc:format>text/html</dc:format>
-    
-    <dc:source>Sweriges rikes lag, 1734. Physical artefact.</dc:source>
-    
-    <dc:language>sv</dc:language>
-    <dc:language>en</dc:language>
-    
-    <dc:rights>Licensed under Creative Commons Attribution 4.0 International (CC-BY 4.0)</dc:rights>
-
-</metadata>
+    <rdf:Description rdf:about="urn:sweriges-rikes-lag-1734-digital">
+        
+        <dc:title>Sweriges rikes lag 1734 - Digital Remediation</dc:title>
+        
+        <dc:creator>Sachini Nissanka</dc:creator>
+        <dc:creator>Erik Lundahl</dc:creator>
+        
+        <dc:subject>Swedish legal history</dc:subject>
+        <dc:subject>Digitisation</dc:subject>
+        <dc:subject>Archival methodology</dc:subject>
+        <dc:subject>Multimodality</dc:subject>
+        
+        <dc:description>A digital remediation, transcription, and archival capture of the "Stöld" (Thievery) chapter from the 1734 Swedish legal code.</dc:description>
+        
+        <dc:publisher>University of Borås</dc:publisher>
+        
+        <dcterms:created rdf:datatype="http://purl.org/dc/terms/W3CDTF">2026-05</dcterms:created>
+        
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/Image"/>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text"/>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource"/>
+        
+        <dc:format rdf:datatype="http://purl.org/dc/terms/IMT">image/webp</dc:format>
+        <dc:format rdf:datatype="http://purl.org/dc/terms/IMT">image/tiff</dc:format>
+        <dc:format rdf:datatype="http://purl.org/dc/terms/IMT">text/xml</dc:format>
+        <dc:format rdf:datatype="http://purl.org/dc/terms/IMT">text/html</dc:format>
+        
+        <dc:source>Sweriges rikes lag, 1734. Physical artefact.</dc:source>
+        
+        <dc:language rdf:datatype="http://purl.org/dc/terms/RFC4646">sv</dc:language>
+        <dc:language rdf:datatype="http://purl.org/dc/terms/RFC4646">en</dc:language>
+        
+        <dc:rights>Licensed under Creative Commons Attribution 4.0 International (CC-BY 4.0)</dc:rights>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        
+    </rdf:Description>
+</rdf:RDF>
