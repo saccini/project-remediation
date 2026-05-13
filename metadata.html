@@ -26,6 +26,20 @@
         </div>
     </header>
     <main>
+        <section class="metadata-explanation" style="max-width: 800px; margin-bottom: 3rem; line-height: 1.6;">
+        <h2>Our Archival Approach to Metadata</h2>
+        <p>
+          To ensure our digital remediation of <em>Sweriges rikes lag 1734</em> is highly accessible, interoperable, and ethically preserved, we implemented a dual-layered metadata strategy focusing on both external cataloging and embedded file data.
+        </p>
+        <p>
+          <strong>External Metadata (Qualified Dublin Core via RDF/XML):</strong><br>
+          For our overarching project catalog, we focused on the <strong>Dublin Core (DC)</strong> schema, specifically upgrading to <strong>Qualified Dublin Core (dcterms)</strong> using an RDF/XML structure. We chose this schema because it is the gold standard for digital heritage preservation. By using RDF datatypes (like W3CDTF for dates and IMT for media types) and DCMI Type Vocabularies, we transformed flat text descriptions into machine-readable linked data. This ensures our archive can be easily harvested and understood by global academic databases.
+        </p>
+        <p>
+          <strong>Embedded Metadata (XMP / IPTC / EXIF):</strong><br>
+          For the digital artefacts themselves (the .tiff and .webp images), we relied on embedded XMP and IPTC schemas using GIMP. We focused heavily on this approach to prevent our images from becoming "orphan works." By embedding the <em>Creative Commons (CC-BY 4.0)</em> license, creator details, and specific camera setup context directly into the file's EXIF and XMP headers, we guarantee that the provenance, context, and copyright status travel permanently with the file, even if it is downloaded and separated from this website.
+        </p>
+      </section>
         <div>
             <span class="topic">Embedded metadata (XMP / IPTC / EXIF)</span>
             <p style="font-size:0.82rem; color:rgb(120,120,120); margin-bottom:1rem; font-style:italic;">
