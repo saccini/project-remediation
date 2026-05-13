@@ -7,15 +7,16 @@
   <teiHeader>
     <fileDesc>
         <titleStmt>
-            <title>
-                img2
+            <title> <!-- title of the resource -->
+                img3
             </title>
             <respStmt>
                 <resp>Transcribed by</resp>
                 <name>Sachini Nissanka</name>
             </respStmt>
         </titleStmt>
-        <publicationStmt> 
+
+        <publicationStmt> <!-- Information about distribution of the resource -->
             <publisher>Sachini Nissanka and Erik Lundahl</publisher>
             <date>2026</date>
             <availability>
@@ -25,7 +26,8 @@
                 </p>
             </availability>
         </publicationStmt>
-        <sourceDesc>
+
+        <sourceDesc> <!-- Information about source from which the resource derives -->
             <msDesc>
                 <msIdentifier>
                     <country>Sweden</country>
@@ -43,12 +45,14 @@
                         <textLang mainLang="sv">Swedish</textLang>
                     </msItem>       
                 </msContents>
+
                 <physDesc>
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>paper</support>
                         </supportDesc>
                     </objectDesc>
+
                     <typeDesc>
                         <typeNote>
                             Printed in Fraktur typeface.
@@ -58,11 +62,13 @@
             </msDesc>
         </sourceDesc>
     </fileDesc>
+
     <profileDesc>
         <langUsage>
             <language ident="sv">Swedish as used in 18th century.</language>
         </langUsage>
     </profileDesc>
+
     <encodingDesc>
         <tagsDecl>
             <rendition xml:id="dropCap">
@@ -77,49 +83,50 @@
         </tagsDecl>
     </encodingDesc>
   </teiHeader>
+
   <text xml:lang="sv" rendition="font">
     <body>
-        <pb n="253"/>
+        <pb n="254"/>
+        <fw type="pageNum" place="top-right">254</fw>
         <fw type="header" place="top-center">Mißgiernings Balk.</fw>
-        <p><add rend="ink" resp="unknown-annotator">Cap. 40.</add></p>
-        <fw type="pageNum" place="top-right">253</fw>
         <milestone unit="line" rend="horizontal-rule"/>
         <div type="chapter"> 
-                <p rendition="#indentFirst">
-                    <lb/> 2. §. Stiäl någor å flera ställen, än ett, eller
-                    <lb/> på åtskilliga tider, och hafwer ej förr warit för tiuf
-                    <lb break="no"/>nad lagförd och straffad; tå skal om hwarje tiufnad
-                    <lb/>särskilt å sin ort ransakas, och ther pröfwas, om
-                    <lb/>han til tiufnaden saker är; gånge sedan Dom öfwer
-                    <lb/>tiufwen för altsamman, ther han sidst lagföres, och
-                    <lb/>plichte, som then ther första gången stulit.
+                <p>
+                    <lb/>timmer och gärdsel; stånde tiufsrätt. Är thet min-
+                    <lb break="no"/>dre; tå bötes, som om snatteri sägs.
                 </p>
                 <p rendition="#indentFirst">
-                    <lb/>3. §. Warder tiuf för stöld andra gången lag
-                    <lb break="no"/>förd; böte fyradubbelt tiufnadens wårde. Orkar
-                    <lb/>han ei böta; plichtte med kroppen, som sagdt är,
-                    <lb/>och tå ökes straffet med fem par spö, eller fyra par 
-                    <lb/>ris. Kommer han tridie gången åter, och stiger
-                    <lb/>tiufnaden til hundrade daler; warde hångd, ehwad
-                    <lb/>het är man, eller qwinna. Är tiufnaden mindre;
-                    <lb/>miste ej lifwet: utan plichtte med kroppen, efter stöl
-                    <lb break="no"/>dens wårde, och arbete i try åhr under Konungens
-                    <lb/>håchte. Stiäl han fierde gången; warde hångd.
+                    <lb/>6. §. Hwar som bryter sig in i något rum, el-
+                    <lb break="no"/>ler hus, til at stiäla, ändoch han alsintet finner el-
+                    <lb break="no"/>ler tager; straffes första gången med nijo par spö,
+                    <lb/>eller sin par ris. Sker thet andra gången; ware
+                    <lb/>twegildt. Kommer han tridie gången åter; plichte
+                    <lb/>med tiugu sin par spö, eller tiugu ett par ris, och
+                    <lb/>fierde gången med tretijo ser par spd, eller tingusiu
+                    <lb/>par ris. Hafwer han ock tå något stulit; plichte
+                    <lb/>therföre särskilt, som förr sagdt är.
                 </p>
                 <p rendition="#indentFirst">
-                    <lb/>4. §. Alt thet stulit är, bör gåldas åter, förr
-                    <lb/>än böter uttagas. Gitter tiufwen thet ei; förnöje
-                    <lb/>målsåganden med arbete, når tiuf ei lif mister, el
-                    <lb break="no"/> ler til Konungens arbete dömd är.
+                    <lb/>7. §. Bryter tiuf sig in genom fenster, eller
+                    <lb/>eljest i gård och hus om nattetid, och får sår, eller
+                    <lb/>warder dräpen; ware ogildt. Sätter han sig til
+                    <lb/>motwärn, ehwad thet är natt, eller dag; ware lag
+                    <lb/>samma. Giör han them skada, som sitt wäria wil-
+                    <lb break="no"/>ja; ligge i tweböte, och plichte thertil för hemfrids
+                    <lb/>brott.
                 </p>
                 <p rendition="#indentFirst">
-                    <lb/>5. §. Stiäl någor frucht ur trägård, humle
-                    <lb break="no"/>gård, roswogård, eller kålgård, årter bönor,
-                    <lb/>ällion eller nötter til full mans bördo, el
-                    <lb break="no"/>er laß; eller stiäl och förer bort ett laß af annars huggen wed,
+                    <lb/>8 §. Tager annar man tiufwen, än then,
+                    <lb/>som rätter målsägande är, eller godset wårda bor-
+                    <lb break="no"/>de; tå äger han tiugunde penningen af alt, thet
+                    <lb/>tiufwen ther hade med sig, som hans egit war.
                 </p>
-                <fw type="signatureMark" place="bottom-center">Ii 3</fw> 
-                <fw type="catchword" place="bottom-right">tim</fw>
+                <p rendition="#indentFirst">
+                    <lb/>9. §. Wil ei målsäganden sielf anklaga tiuf-
+                    <lb break="no"/>wen for Rätta; käre tå then, som å Konungens
+                    <lb/>wägnar kära äger, och niute mälsägande rätt.
+                </p>
+                <fw type="catchword" place="bottom-right">10. §.</fw>
         </div>
     </body>
   </text>

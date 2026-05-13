@@ -6,6 +6,7 @@
       caption:  'Fig. 1 \u2014 Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 252, digitised [2026-05-01]',
       download: 'assets/images/P1stoldwMetadataedit.webp',
       transcription: 'assets/transcriptions/lb17919007_5_0288.txt',
+      metadata: 'assets/images/P1stoldMetadata.xml',
     },
     {
       src:      'assets/images/P2stoldwMetadataedit.webp',
@@ -13,6 +14,7 @@
       caption:  'Fig. 2 \u2014 Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 253, digitised [2026-05-01]',
       download: 'assets/images/P2stoldwMetadataedit.webp',
       transcription: 'assets/transcriptions/lb17919007_5_0289.txt',
+      metadata: 'assets/images/P2stoldMetadata.xml',
     },
     {
       src:      'assets/images/P3stoldwMetadataedit.webp',
@@ -20,6 +22,7 @@
       caption:  'Fig. 3 \u2014 Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 254, digitised [2026-05-01]',
       download: 'assets/images/P3stoldwMetadataedit.tiff',
       transcription: 'assets/transcriptions/lb17919007_5_0290.txt',
+      metadata: 'assets/images/P3stoldMetadata.xml',
     },
     {
       src:      'assets/images/P4soldwMetadataedit.webp',
@@ -27,6 +30,7 @@
       caption:  'Fig. 4 \u2014 Sweriges Rikes Lag Gillad och antagen på Riksdagen Åhr 1734, p. 255, digitised [2026-05-01]',
       download: 'assets/images/P4soldwMetadataedit.tiff',
       transcription: 'assets/transcriptions/lb17919007_5_0291.txt',
+      metadata: 'assets/images/P4stoldMetadata.xml',
     },
   ];
 
@@ -46,7 +50,7 @@ const allParagraphs = [
       english:  'On theft.',
     },
     {
-      original: '1. §. HWar som första gången stiäl gods, eller pennin- gar, öfwer tijo daler; böte tre gånger så myc- ket, som thet stulne wärdt är. Orkar han ej böta; plichte med kroppen, doch ej högre, än efter stöl- dens wärde.',
+      original: '§ 1. HWar som första gången stiäl gods, eller penningar, öfwer tijo daler; böte tre gånger så mycket, som thet stulne wärdt är. Orkar han ej böta; plichte med kroppen, doch ej högre, än efter stöldens wärde.',
       modern:   '1. §. Den som för första gången stjäl gods eller pengar över tio daler; böte tre gånger så mycket som det stulna är värt. Orkar [kan] han ej böta; plikte med kroppen [få kroppsstraff/fängelse], dock ej högre än efter stöldens värde.',
       english:  '§ 1. He who for the first time steals goods, or money, over ten daler; shall be fined three times as much as the stolen is worth. If he cannot afford to fine [pay]; he shall be punished with the body [corporal punishment/imprisonment], yet not higher than according to the value of the theft.',
     },
@@ -70,7 +74,7 @@ const allParagraphs = [
       english:  '§ 3. If a thief is prosecuted for theft a second time; he shall be fined quadruple the value of the theft. If he cannot afford to fine; he shall be punished with the body, as is said, and then the punishment is increased with five pairs of whips [lashes], or four pairs of birches [strikes with birch rods]. If he returns a third time, and the theft amounts to a hundred daler; he shall be hanged, whether it is a man or a woman. If the theft is less; he shall not lose his life: but be punished with the body, according to the value of the theft, and labor for three years under the King\'s custody [penal labor]. If he steals a fourth time; he shall be hanged.',
     },
     {
-      original: '§ 4. All that is stolen ought to be repaid, before fines are extracted. If the thief is unable to do so; he shall satisfy the plaintiff with labor, when the thief does not lose his life, or is sentenced to the King\'s labor.',
+      original: '4 §. Alt thet stulit är, bör gäldas åter, förrän böter uttagas. Gitter tiufwen thet ej; förnöjemålsäganden med arbete, när tiuf ej lif misterler til Konungens arbete dömd är.',
       modern:   '4. §. Allt det stulet är, bör gäldas [betalas/lämnas] åter, förrän böter uttagas. Gitter [förmår] tjuven det ej; förnöje målsäganden med arbete, när tjuv ej livet mister, eller till Konungens arbete dömd är.',
       english:  '§ 4. All that is stolen ought to be repaid, before fines are extracted. If the thief is unable to do so; he shall satisfy the plaintiff with labor, when the thief does not lose his life, or is sentenced to the King\s labor.',
     },
