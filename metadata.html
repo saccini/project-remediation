@@ -32,14 +32,32 @@
             Added manually via GIMP &rarr; Image &rarr; Metadata &rarr; Edit Metadata to all structural images.
             </p>
             <table class="meta-table">
-                <tr><td>Xmp.dc.title</td><td>The specific filename or identifier of the image (e.g., P1stold).</td></tr>
-                <tr><td>Xmp.dc.creator</td><td>Erik Lundahl</td></tr>
-                <tr><td>Xmp.dc.description</td><td>A detailed, contextual description of the camera setup and the specific contents shown on the page or in the workspace.</td></tr>
-                <tr><td>Xmp.iptcExt.PersonInImage</td><td>Identifies any individuals visible in the frame during the process documentation.</td></tr>
-                <tr><td>Location Data</td><td>Structured geographic hierarchy marking the location of the digitisation (Stockholm, Sweden, SE, Europe).</td></tr>
-                <tr><td>Xmp.iptcExt.AddlModelInfo</td><td>Technical camera parameters (Aperture, ISO, Exposure, Megapixels) alongside the exact device age at the time of capture.</td></tr>
-                <tr><td>Exif.GPSInfo</td><td>Exact coordinates (Longitude, Latitude, and Altitude) of the workspace.</td></tr>
-            </table>
+          <tr><td>Xmp.dc.title</td><td>The specific filename or identifier of the image (e.g., P1stold).</td></tr>
+          <tr><td>Xmp.dc.creator</td><td>Erik Lundahl</td></tr>
+          <tr><td>Xmp.dc.description</td><td>A detailed, contextual description of the camera setup and the specific contents shown on the page or in the workspace.</td></tr>
+          <tr><td>Xmp.iptcExt.PersonInImage</td><td>Identifies any individuals visible in the frame during the process documentation.</td></tr>
+          <tr>
+              <td>
+                  Xmp.iptcExt.City<br>
+                  Xmp.iptcExt.CountryName<br>
+                  Xmp.iptcExt.CountryCode<br>
+                  Xmp.iptcExt.WorldRegion
+              </td>
+              <td>Structured geographic hierarchy marking the location of the digitisation (Stockholm, Sweden, SE, Europe).</td>
+          </tr>
+          <tr><td>Xmp.iptcExt.AddlModelInfo</td><td>Technical camera parameters (Aperture, ISO, Exposure, Megapixels) alongside the exact device age at the time of capture.</td></tr>
+          <tr>
+              <td>
+                  Exif.GPSInfo.GPSLongitude<br>
+                  Exif.GPSInfo.GPSLatitude<br>
+                  Exif.GPSInfo.GPSAltitude
+              </td>
+              <td>Exact coordinates (Longitude, Latitude, and Altitude) of the workspace.</td>
+          </tr>
+          <tr><td>Xmp.dc.rights</td><td>The copyright notice (e.g., (c) 2026 Sachini Nissanka and Erik Lundahl, licensed under CC-BY 4.0).</td></tr>
+          <tr><td>Xmp.xmpRights.WebStatement</td><td>A direct link to the applied license (e.g., https://creativecommons.org/licenses/by/4.0/).</td></tr>
+          <tr><td>Xmp.xmpRights.Marked</td><td>Boolean flag indicating the image is copyrighted (True).</td></tr>
+      </table>
         </div>
         <hr class="rule">
         <div>
@@ -50,15 +68,16 @@
       <table class="meta-table">
         <tr><td>dc:title</td><td>Sweriges rikes lag 1734 - Digital Remediation</td></tr>
         <tr><td>dc:creator</td><td>Sachini Nissanka &amp; Erik Lundahl</td></tr>
-        <tr><td>dc:subject</td><td>Swedish legal history; Digitisation; Archival methodology</td></tr>
+        <tr><td>dc:subject</td><td>Swedish legal history; Digitisation; Archival methodology; Multimodality</td></tr>
         <tr><td>dc:description</td><td>A digital remediation, transcription, and archival capture of the "Stöld" (Thievery) chapter from the 1734 Swedish legal code.</td></tr>
         <tr><td>dc:publisher</td><td>University of Borås</td></tr>
-        <tr><td>dc:date</td><td>2026-05</td></tr>
-        <tr><td>dc:type</td><td>Image / Text / InteractiveResource</td></tr>
+        <tr><td>dcterms:created</td><td>2026-05</td></tr>
+        <tr><td>dc:type</td><td>Collection / Image / Text / InteractiveResource</td></tr>
         <tr><td>dc:format</td><td>image/webp, image/tiff, text/xml, text/html</td></tr>
         <tr><td>dc:source</td><td>Sweriges rikes lag, 1734. Physical artefact.</td></tr>
-        <tr><td>dc:language</td><td>sv (Swedish)</td></tr>
-        <tr><td>dc:rights</td><td>CC-BY 4.0</td></tr>
+        <tr><td>dc:language</td><td>sv (Swedish), en (English)</td></tr>
+        <tr><td>dc:rights</td><td>Licensed under Creative Commons Attribution 4.0 International (CC-BY 4.0)</td></tr>
+        <tr><td>dcterms:license</td><td><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">https://creativecommons.org/licenses/by/4.0/</a></td></tr>
       </table>
       <a class="img-download" href="assets/metadata/metadata.xml" style="margin-top:1rem;">
         Download Dublin Core XML &darr;
