@@ -11,9 +11,9 @@ To fully understand this project, we highly suggest visiting our [GitHub Pages W
 >[!NOTE]
 > The source material used in this project is an 18th-century physical book. Please be aware that the original text features historical Swedish spelling, grammar, and typography. While our TEI-XML transcription strives for high fidelity to the original text, translating a physical, historical book into a digital, machine-readable format inherently requires interpretative choices. You can read more about the physical state of the artefact and our specific encoding decisions on the project website.
  
-To explore this project, you do not need to install any specific software like Python or Pandas. Instead, you have three ways to interact with our work:
+To explore this project, you do not need to install any specific software. Instead, you have three ways to interact with our work:
 
-**1. The Website (Recommended)**
+**1. The Website **
 For the best reading and viewing experience, simply click the blue **View Website** badge at the top of this page. This will take you to our interactive site where you can explore the artefact, the TEI-XML transcriptions, and the embedded Dublin Core metadata in a user-friendly format.
 
 **2. The Zenodo Archive**
@@ -26,7 +26,7 @@ If you want to view the raw HTML, CSS, and XML files that make up this repositor
 
 <img width="1215" height="513" alt="image" src="https://github.com/user-attachments/assets/afc2b0b3-75dd-44ea-b971-57eed3623704" />
 
-Once you have cloned the repository, you can navigate through the `assets`, `metadata`, and `.html` files to see exactly how the digital archive is structured under the hood. No further installation or debuggers are required!
+Once you have cloned the repository, you can navigate through the `assets`, `metadata`, and `.html` files to see exactly how the digital archive is structured under the hood.
 
 We hope you enjoy exploring our digital remediation project!
 
