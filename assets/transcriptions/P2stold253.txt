@@ -4,11 +4,11 @@ Page 253
 
 --------------------------------------- Original -----------------------------------------------
 
-Missgiernings Balk. sid 253
+Mißgiernings Balk. 
 
 2. §.
 Stiäl någor å flera ställen, än ett, eller på åtskilliga tider, och hafwer
-ei förr warit för tiufnad lagförd och straffad; tå skal om hwarje tiufnad
+ej förr warit för tiufnad lagförd och straffad; tå skal om hwarje tiufnad
 särskilt å sin ort ransakas, och ther pröfwas, om han til tiufnaden saker
 är; gånge sedan Dom öfwer tiufwen för altsamman, ther han sidst lagföres,
 och plichtte, som then ther första gången stulit.
@@ -35,7 +35,7 @@ förer bort ett laß af annars huggen wed,
 
 --------------------------------------- Modern Swedish Translation --------------------------------
 
-
+Brottsbalken
 
 2. §. Stjäl någon på flera ställen än ett, eller vid åtskilliga tider [tillfällen], 
 och har ej förr varit för tjuvnad lagförd och straffad; då ska om varje tjuvnad särskilt på sin ort rannsakas [utredas], 
@@ -54,4 +54,12 @@ förnöje målsäganden med arbete, när tjuv ej livet mister, eller till Konung
 
 --------------------------------------- English Translation ---------------------------------------
 
+The Criminal Code
 
+2. §. If someone steals in more places than one, or at various times, and has not previously been prosecuted and punished for theft; then each theft shall be separately investigated in its place, and there tried, if he is guilty of the theft; then pass judgment upon the thief for all of it together, where he is last prosecuted, and be punished as he who there stole for the first time.
+
+3. §. If a thief is prosecuted for theft a second time; he shall be fined quadruple the value of the theft. If he cannot afford to fine; he shall be punished with the body, as is said, and then the punishment is increased with five pairs of whips [lashes], or four pairs of birches [strikes with birch rods]. If he returns a third time, and the theft amounts to a hundred daler; he shall be hanged, whether it is a man or a woman. If the theft is less; he shall not lose his life: but be punished with the body, according to the value of the theft, and labor for three years under the King\'s custody [penal labor]. If he steals a fourth time; he shall be hanged.
+
+4 §. All that is stolen ought to be repaid, before fines are extracted. If the thief is unable to do so; he shall satisfy the plaintiff with labor, when the thief does not lose his life, or is sentenced to the King\s labor.
+
+5. §. If someone steals fruit from a garden, hop garden, turnip garden, or cabbage garden, peas, beans, acorns or nuts to a full man\s burden, or load; or steals and carries away a load of another\s chopped wood,

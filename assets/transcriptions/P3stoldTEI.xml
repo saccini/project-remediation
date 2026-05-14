@@ -7,8 +7,8 @@
   <teiHeader>
     <fileDesc>
         <titleStmt>
-            <title> <!-- title of the resource -->
-                img3
+            <title> 
+                XL. Cap. Om stöld. page 254.
             </title>
             <respStmt>
                 <resp>Transcribed by</resp>
@@ -16,7 +16,7 @@
             </respStmt>
         </titleStmt>
 
-        <publicationStmt> <!-- Information about distribution of the resource -->
+        <publicationStmt> 
             <publisher>Sachini Nissanka and Erik Lundahl</publisher>
             <date>2026</date>
             <availability>
@@ -27,7 +27,7 @@
             </availability>
         </publicationStmt>
 
-        <sourceDesc> <!-- Information about source from which the resource derives -->
+        <sourceDesc> 
             <msDesc>
                 <msIdentifier>
                     <country>Sweden</country>
