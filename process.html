@@ -8,106 +8,6 @@
   <link rel="stylesheet" href="style.css">
   
   <script src="metadata.js" defer></script>
-  
-  <style>
-    .page-header a {
-      color: rgb(200, 200, 200);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      transition: color 0.2s;
-    }
-
-    .page-header a:hover { color: rgb(255, 255, 255); }
-
-    .meta-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.88rem;
-      margin-top: 1rem;
-    }
-
-    .meta-table tr { border-bottom: 1px solid rgb(220, 220, 220); }
-    .meta-table tr:first-child { border-top: 1px solid rgb(220, 220, 220); }
-
-    .meta-table td {
-      padding: 0.6rem 0;
-      vertical-align: top;
-    }
-
-    .meta-table td:first-child {
-      font-family: "Space Mono", monospace;
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: rgb(20, 20, 20);
-      width: 180px;
-      padding-right: 1rem;
-      padding-top: 0.75rem;
-    }
-
-    .meta-table td:last-child { color: rgb(60, 60, 60); }
-
-    .workspace-layout {
-      grid-template-columns: 2fr 3fr;
-    }
-
-    @media (max-width: 700px) {
-      .workspace-layout { grid-template-columns: 1fr; }
-    }
-
-    .workspace-image {
-      position: relative;
-      min-height: 100%;
-    }
-
-    .workspace-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      border: 1px solid rgb(180, 180, 180);
-      border-radius: 2px;
-      cursor: pointer;
-      transition: opacity 0.2s;
-    }
-
-    .workspace-image img:hover { opacity: 0.88; }
-
-    .img-click-hint {
-      font-family: "Space Mono", monospace;
-      font-size: 0.65rem;
-      color: rgb(120, 120, 120);
-      letter-spacing: 0.05em;
-      margin-top: 0.4rem;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .img-click-hint::before {
-      content: '';
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      border: 1.5px dashed rgb(20, 20, 20);
-      border-radius: 1px;
-      flex-shrink: 0;
-    }
-
-    .caption {
-      font-family: "Space Mono", monospace;
-      font-size: 0.65rem;
-      color: rgb(120, 120, 120);
-      letter-spacing: 0.04em;
-      margin-top: 0.4rem;
-    }
-
-    .iteration-header {
-      display: flex;
-      align-items: baseline;
-      gap: 1rem;
-      margin-bottom: 0.75rem;
-    }
-  </style>
 </head>
 <body>
   <nav>
@@ -267,7 +167,7 @@
                  shadows either from the smartphone or the person taking the picture.
             </p>
 
-            <div class="iteration-gallery mixed-col">
+            <div class="iteration-gallery two-col">
                 <div class="gallery-item">
                     <img src="assets/images/It2_nogowmetadata.webp" 
                          alt="Highlighting the move to the new area" 

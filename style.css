@@ -493,12 +493,11 @@ main {
   top: 56px;             
 }
 
-
-
 .meta-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.88rem;
+  margin-top: 1rem;
 }
 
 .meta-table tr {
@@ -520,7 +519,7 @@ main {
   letter-spacing: 0.05em;
   color: rgb(20, 20, 20);
   font-weight: 700;
-  width: 150px;
+  width: 180px;
   padding-right: 1rem;
   padding-top: 0.75rem;
 }
@@ -830,38 +829,41 @@ footer p {
 }
 
 .workspace-layout {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 3fr; /* Now properly using grid! */
     align-items: flex-start;
     gap: 30px; 
     margin-top: 20px;
 }
 
-
 .workspace-image {
-    flex: 0 0 50%; 
-    max-width: 50%; 
+    position: relative;
+    min-height: 100%;
+    width: 100%; 
 }
 
 .workspace-image img {
     width: 100%; 
-    height: auto;      
+    height: 100%;
+    object-fit: cover;      
     border-radius: 4px; 
     display: block; 
+    border: 1px solid rgb(180, 180, 180);
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.workspace-image img:hover {
+    opacity: 0.88;
 }
 
 .workspace-text {
-    flex: 1;            
     min-width: 0; 
 }
 
 @media (max-width: 768px) {
     .workspace-layout {
-        flex-direction: column; 
-    }
-    
-    .workspace-image {
-        flex: 1 1 100%;
-        max-width: 100%; 
+        grid-template-columns: 1fr; 
     }
 }
 
@@ -869,12 +871,6 @@ footer p {
     width: 600px; 
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); 
     margin: 0;
-}
-.workspace-layout {
-    display: flex;
-    align-items: flex-start;
-    gap: 30px; 
-    margin-top: 20px;
 }
 
 .modal {
@@ -1142,4 +1138,52 @@ footer p {
 .help-modal-body li {
     margin-bottom: 0.5rem;
     font-size: 0.85rem;
+}
+/* --- Unique styles moved from process.html --- */
+
+.page-header a {
+  color: rgb(200, 200, 200);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.page-header a:hover { 
+  color: rgb(255, 255, 255); 
+}
+
+.img-click-hint {
+  font-family: "Space Mono", monospace;
+  font-size: 0.65rem;
+  color: rgb(120, 120, 120);
+  letter-spacing: 0.05em;
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.img-click-hint::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1.5px dashed rgb(20, 20, 20);
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.caption {
+  font-family: "Space Mono", monospace;
+  font-size: 0.65rem;
+  color: rgb(120, 120, 120);
+  letter-spacing: 0.04em;
+  margin-top: 0.4rem;
+}
+
+.iteration-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
 }
