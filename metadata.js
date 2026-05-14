@@ -30,7 +30,6 @@ class MetadataModal {
     openModal(clickedImage) {
         const xmlFilePath = clickedImage.dataset.xmlSrc;
         
-        // Use innerHTML instead of textContent since we will be injecting HTML spans
         this.codeBlock.innerHTML = '<div class="xml-loading">Fetching XML data...</div>';
         
         this.modal.style.left = "-9999px";
@@ -59,7 +58,6 @@ class MetadataModal {
                     return response.text();
                 })
                 .then(xmlText => {
-                    // NEW: Pass the text through the formatting functions!
                     this.codeBlock.innerHTML = this.syntaxHighlight(this.escapeHTML(xmlText));
                 })
                 .catch(error => {
@@ -75,7 +73,6 @@ class MetadataModal {
         this.modal.style.left = "-9999px"; 
     }
 
-    // --- NEW FORMATTING HELPER FUNCTIONS ---
     escapeHTML(str) {
         return str
             .replace(/&/g, '&amp;')
@@ -107,9 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (slider && overlay && line) {
         slider.addEventListener('input', (e) => {
             const sliderValue = e.target.value;
-            // Adjust the clipping mask to reveal more/less of the image
             overlay.style.clipPath = `polygon(0 0, ${sliderValue}% 0, ${sliderValue}% 100%, 0 100%)`;
-            // Move the white line and handle to match
             line.style.left = `${sliderValue}%`;
         });
     }

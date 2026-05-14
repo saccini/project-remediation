@@ -300,7 +300,6 @@ main {
         margin-top: 0.6rem;
     }
 
-    /* Remove the individual margin-top now that the row handles spacing */
     .img-download-row .img-download {
         margin-top: 0;
     }
@@ -408,7 +407,7 @@ main {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
-  align-items: stretch;  /* changed from start to stretch */
+  align-items: stretch; 
 }
 
 .about-grid img {
@@ -829,7 +828,7 @@ footer p {
   text-transform: uppercase;
   color: rgb(245, 245, 245);
 }
-/* Creates the flexible side-by-side layout */
+
 .workspace-layout {
     display: flex;
     align-items: flex-start;
@@ -837,46 +836,39 @@ footer p {
     margin-top: 20px;
 }
 
-/* The dynamic, flexible image container */
+
 .workspace-image {
-    /* flex: grow shrink basis. 
-       This tells it to take up 45% of the row, no matter what. */
     flex: 0 0 50%; 
-    max-width: 50%; /* Failsafe to prevent overflowing */
+    max-width: 50%; 
 }
 
-/* The image adapts perfectly to its container */
 .workspace-image img {
     width: 100%; 
-    height: auto;       /* Preserves the natural aspect ratio */
+    height: auto;      
     border-radius: 4px; 
     display: block; 
 }
 
-/* The dynamic text container */
 .workspace-text {
-    flex: 1;            /* Tells the text to take up whatever space is left over */
+    flex: 1;            
     min-width: 0; 
 }
 
-/* --- PRO TIP: MOBILE RESPONSIVENESS --- */
-/* When the screen gets smaller than an iPad (768px), stack them on top of each other instead of side-by-side */
 @media (max-width: 768px) {
     .workspace-layout {
-        flex-direction: column; /* Stacks the items vertically */
+        flex-direction: column; 
     }
     
     .workspace-image {
         flex: 1 1 100%;
-        max-width: 100%; /* Image takes up the full width on phones */
+        max-width: 100%; 
     }
 }
-/* The floating wrapper for the XML popup */
+
 .modal-content {
     width: 600px; 
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); /* Nice heavy drop shadow */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); 
     margin: 0;
-    /* Background colors, fonts, and borders are now automatically inherited from .xml-box! */
 }
 .workspace-layout {
     display: flex;
@@ -885,18 +877,16 @@ footer p {
     margin-top: 20px;
 }
 
-/* Controls the pop-up window's position */
 .modal {
     display: none; 
     position: absolute; 
     z-index: 1000; 
 }
-/* --- NEW: 3-Column Image Gallery --- */
+
 .iteration-gallery {
     display: grid;
-    /* This creates 3 equal-width columns */
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px; /* Space between the images */
+    gap: 20px; 
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -909,23 +899,22 @@ footer p {
 }
 
 .gallery-item .caption {
-    text-align: center; /* Centers the caption under each image */
+    text-align: center; 
     font-size: 0.85em;
     margin-top: 8px;
 }
 
-/* Make it responsive for mobile devices */
+
 @media (max-width: 768px) {
     .iteration-gallery {
-        /* On small screens, stack the images 1 on top of the other */
         grid-template-columns: 1fr; 
     }
 }
-/* Modifier for 2-column galleries */
+
 .iteration-gallery.two-col {
     grid-template-columns: repeat(2, 1fr);
 }
-/* Make all metadata images interactive with a hover fade */
+
 .metadata-image {
     cursor: pointer;
     transition: opacity 0.2s ease;
@@ -934,10 +923,10 @@ footer p {
 .metadata-image:hover {
     opacity: 0.88;
 }
-/* --- Book Showcase: Centered, 2 Columns, 75% Size --- */
+
 .book-showcase-grid {
     display: flex;
-    justify-content: center; /* Pushes both items to the dead center of the page */
+    justify-content: center; 
     gap: 40px; 
     width: 100%;
     margin-top: 40px;
@@ -974,7 +963,7 @@ footer p {
     color: rgb(100, 100, 100);
 }
 
-/* Mobile: stack into 2 columns, hide divider */
+
 @media (max-width: 768px) {
     .book-showcase-grid {
         grid-template-columns: 1fr 1fr;
@@ -1065,11 +1054,10 @@ footer p {
 }
 
 
-/* ── HELP BUTTON ── */
 .help-btn {
     position: absolute;
-    top: 4.5rem; /* Raised to align perfectly with the H1 */
-    right: 2.5rem; /* Matched the padding of the page border */
+    top: 4.5rem; 
+    right: 2.5rem; 
     width: 32px;
     height: 32px;
     background: transparent;
@@ -1092,7 +1080,7 @@ footer p {
     color: black;
 }
 
-/* ── HELP MODAL (THE MISSING POP-UP STYLES) ── */
+
 .help-modal {
     display: none; 
     position: fixed;

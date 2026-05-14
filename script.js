@@ -37,7 +37,6 @@
 
 const allParagraphs = [
 
-  /* ── img 1 (p. 252) ── */
   [
     {
       original: 'XL Cap.',
@@ -56,7 +55,6 @@ const allParagraphs = [
     },
   ],
 
-  /* ── img 2 (p. 253) ── */
   [
     {
       original: 'Mißgiernings Balk.  sid 253',
@@ -85,7 +83,6 @@ const allParagraphs = [
     },
   ],
 
-  /* ── img 3 (p. 254) ── */
   [
     {
       original: 'Mißgiernings Balk. sid 254',
@@ -119,7 +116,6 @@ const allParagraphs = [
     },
   ],
 
-  /* ── img 4 (p. 255) ── */
   [
     {
       original: 'Mißgiernings Balk. sid 255',
@@ -135,19 +131,19 @@ const allParagraphs = [
 ];
 
 const allZones = [
-  /* img1 */ [
+  [
     { top:'46%',  left:'11%', width:'80%', height:'4%', label:'§ 1' },
     { top:'50%', left:'11%', width:'80%', height:'4%', label:'§ 2'  },
     { top:'54%', left:'11%', width:'80%', height:'18%', label:'§ 3' },
   ],
-  /* img2*/ [
+  [
     { top:'5%',  left:'12%', width:'52%', height:'4%', label:'§ 4' },
     { top:'9%', left:'12%', width:'52%', height:'16%', label:'§ 5' },
     { top:'25%', left:'12%', width:'52%', height:'23%', label:'§ 6' },
     { top:'48%', left:'12%', width:'52%', height:'10%', label:'§ 7' },
     { top:'58%', left:'12%', width:'52%', height:'11%', label:'§ 8' },
   ],
-  /* img3*/ [
+   [
     { top:'3%',  left:'36%', width:'58%', height:'5%',  label:'§ 9' },
     { top:'8%', left:'36%', width:'58%', height:'5%', label:'§ 10'},
     { top:'14%', left:'35%', width:'58%', height:'21%', label:'§ 11'},
@@ -155,7 +151,7 @@ const allZones = [
     { top:'51%', left:'34%', width:'58%', height:'9.5%',  label:'§ 13'},
     { top:'60%', left:'34%', width:'58%', height:'10%',  label:'§ 14'},
   ],
-  /* img4*/ [
+   [
     { top:'3%',  left:'10%', width:'60%', height:'5%', label:'§ 15'},
     { top:'9%', left:'10%', width:'60%', height:'9.5%', label:'§ 16'},
   ],
@@ -304,7 +300,7 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeLightbox();
 });
 
-/* ── GALLERY SETUP (ONLY RUNS ON ARTEFACT PAGE) ── */
+
 const imgCounter = document.getElementById('img-counter');
 const overlay = document.getElementById('zone-overlay');
 
@@ -314,24 +310,21 @@ if (imgCounter && overlay) {
     selectZone(0);
 }
 
-/* ── HELP MODAL LOGIC (RUNS ON ANY PAGE THAT HAS THE BUTTON) ── */
+
 document.addEventListener('DOMContentLoaded', () => {
     const helpBtn = document.getElementById('help-btn');
     const helpModal = document.getElementById('help-modal');
     const closeHelpBtn = document.getElementById('close-help-btn');
 
     if (helpBtn && helpModal && closeHelpBtn) {
-        // Open modal
         helpBtn.addEventListener('click', () => {
             helpModal.style.display = 'block';
         });
 
-        // Close modal on X click
         closeHelpBtn.addEventListener('click', () => {
             helpModal.style.display = 'none';
         });
 
-        // Close modal when clicking outside of it
         window.addEventListener('click', (event) => {
             if (event.target === helpModal) {
                 helpModal.style.display = 'none';
