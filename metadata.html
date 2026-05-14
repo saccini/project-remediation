@@ -26,20 +26,32 @@
         </div>
     </header>
     <main>
-        <section class="metadata-explanation" style="max-width: 800px; margin-bottom: 3rem; line-height: 1.6;">
-        <h2>Our Archival Approach to Metadata</h2>
-        <p>
-          To ensure our digital remediation of <em>Sweriges rikes lag 1734</em> is highly accessible, interoperable, and ethically preserved, we implemented a dual-layered metadata strategy focusing on both external cataloging and embedded file data.
-        </p>
-        <p>
-          <strong>External Metadata (Qualified Dublin Core via RDF/XML):</strong><br>
-          For our overarching project catalog, we focused on the <strong>Dublin Core (DC)</strong> schema, specifically upgrading to <strong>Qualified Dublin Core (dcterms)</strong> using an RDF/XML structure. We chose this schema because it is the gold standard for digital heritage preservation. By using RDF datatypes (like W3CDTF for dates and IMT for media types) and DCMI Type Vocabularies, we transformed flat text descriptions into machine-readable linked data. This ensures our archive can be easily harvested and understood by global academic databases.
-        </p>
-        <p>
-          <strong>Embedded Metadata (XMP / IPTC / EXIF):</strong><br>
-          For the digital artefacts themselves (the .tiff and .webp images), we relied on embedded XMP and IPTC schemas using GIMP. We focused heavily on this approach to prevent our images from becoming "orphan works." By embedding the <em>Creative Commons (CC-BY 4.0)</em> license, creator details, and specific camera setup context directly into the file's EXIF and XMP headers, we guarantee that the provenance, context, and copyright status travel permanently with the file, even if it is downloaded and separated from this website.
-        </p>
-      </section>
+        <div style="margin-bottom: 3rem;">
+            <div class="bodytext">
+                <p>
+                    Metadata is fundamentally "data about data." In the context of digital remediation, it is what transforms a 
+                    simple photograph into a verifiable, archival asset. As Björk (2015) highlights, a digital reproduction is 
+                    never a truly neutral copy of a physical artefact. It is heavily influenced by the technical and methodological 
+                    choices of its creators.
+                </p>
+                <p>
+                    To account for this, this project implements both traditional metadata and <strong>paradata</strong>, which is 
+                    data that documents the actual process, environment, and tools of creation (Huvila et al., 2022). 
+                    This page outlines our two distinct approaches to capturing this data:
+                </p>
+                <p>
+                    First, we use <strong>Embedded Metadata</strong> (XMP/IPTC/EXIF), which is baked directly into every image file. 
+                    By embedding our technical camera parameters, capture dates, and physical setup descriptions, we are actively 
+                    preserving the paradata of our digitisation process. By embedding the data we ensure that it is never seperated from 
+                    the visual file and thus preventing the creation of "orphan works"(Martinez & Terras, 2020).
+                </p>
+                <p>
+                    Second, we use <strong>External Metadata</strong> based on the <strong>Dublin Core</strong> standard (DCMI, 2012). 
+                    This acts as a project-wide bibliographic record, allowing the entire collection to be easily indexed, shared, and 
+                    ingested by modern digital library systems.
+                </p>
+            </div>
+        </div>
         <div>
             <span class="topic">Embedded metadata (XMP / IPTC / EXIF)</span>
             <p style="font-size:0.82rem; color:rgb(120,120,120); margin-bottom:1rem; font-style:italic;">
@@ -64,9 +76,8 @@
               <td>
                   Exif.GPSInfo.GPSLongitude<br>
                   Exif.GPSInfo.GPSLatitude<br>
-                  Exif.GPSInfo.GPSAltitude
               </td>
-              <td>Exact coordinates (Longitude, Latitude, and Altitude) of the workspace.</td>
+              <td>Exact coordinates (Longitude & Latitude) of the workspace.</td>
           </tr>
           <tr><td>Xmp.dc.rights</td><td>The copyright notice (e.g., (c) 2026 Sachini Nissanka and Erik Lundahl, licensed under CC-BY 4.0).</td></tr>
           <tr><td>Xmp.xmpRights.WebStatement</td><td>A direct link to the applied license (e.g., https://creativecommons.org/licenses/by/4.0/).</td></tr>
