@@ -13,7 +13,16 @@
     <xmp-tag>
         <tag-name>Xmp.dc.description</tag-name>
         <tag-mode>multi</tag-mode>
-        <tag-value>Page 3 of stöld (thievery) chapter in Swergies rikes Lag 1734. Taken during iteration 3.</tag-value>
+        <tag-value>
+            3st page of Sweriges rikes lag containing stold(thievery). 
+            The page is made of thick paper that is slightly coarser than a modern 
+            A4 print paper. The legal text is printed in Fraktur style. 
+            A visible artefact from the printing process is that not all the letters 
+            have gotten an exact equal amount of inc meaning that some letters 
+            are more saturated than others. We can also see that
+            some letters are smudged and less readable than others.
+            Captured during 3rd iteration setup.
+        </tag-value>
     </xmp-tag>
     <xmp-tag>
         <tag-name>Xmp.iptcExt.PersonInImage</tag-name>
